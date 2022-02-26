@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
+  m_Name: FeelTheSameChart
+  m_EditorClassIdentifier: 
+  segments:
+  - startTime: 0
+    endTime: 0
+    numMeasures: 0
+  events:
+  - tick: 0
+    input: 0
+    player: 0
+  - tick: 24
+    input: 0
+    player: 0
+  - tick: 48
+    input: 1
+    player: 0
+  - tick: 72
+    input: 1
+    player: 0

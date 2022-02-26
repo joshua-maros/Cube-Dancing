@@ -11,35 +11,44 @@ public class CubeController : MonoBehaviour
 
     void Start() { }
 
-    void Update() { 
+    void Update()
+    {
         timer += Time.deltaTime;
-        if (timer - lastTick > tickInterval) {
+        if (timer - lastTick > tickInterval)
+        {
             lastTick = timer;
             sequence += 1;
-            if (sequence % 2 == 1) {
+            if (sequence % 2 == 1)
+            {
                 this.StepLeft();
-            } else {
+            }
+            else
+            {
                 this.StepDown();
             }
         }
     }
 
-    public void StepUp() {
+    public void StepUp()
+    {
         this.transform.Translate(Vector3.forward, Space.World);
         this.transform.Rotate(Vector3.right, 90.0f, Space.World);
     }
 
-    public void StepDown() {
+    public void StepDown()
+    {
         this.transform.Translate(Vector3.back, Space.World);
         this.transform.Rotate(Vector3.left, 90.0f, Space.World);
     }
 
-    public void StepLeft() {
+    public void StepLeft()
+    {
         this.transform.Translate(Vector3.left, Space.World);
         this.transform.Rotate(Vector3.forward, 90.0f, Space.World);
     }
 
-    public void StepRight() {
+    public void StepRight()
+    {
         this.transform.Translate(Vector3.right, Space.World);
         this.transform.Rotate(Vector3.back, 90.0f, Space.World);
     }
