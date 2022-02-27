@@ -4,30 +4,7 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
-    private float timer = 0.0f;
-    private float lastTick = 0.0f;
-    private float tickInterval = 1.0f;
-    private int sequence = 0;
-
     void Start() { }
-
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer - lastTick > tickInterval)
-        {
-            lastTick = timer;
-            sequence += 1;
-            if (sequence % 2 == 1)
-            {
-                this.StepLeft();
-            }
-            else
-            {
-                this.StepDown();
-            }
-        }
-    }
 
     public void StepUp()
     {
@@ -51,5 +28,17 @@ public class CubeController : MonoBehaviour
     {
         this.transform.Translate(Vector3.right, Space.World);
         this.transform.Rotate(Vector3.back, 90.0f, Space.World);
+    }
+
+    public void Step(Input input) {
+        if (input == Input.Up) {
+            this.StepUp();
+        } else if (input == Input.Down) {
+            this.StepDown();
+        } else if (input == Input.Left) {
+            this.StepLeft();
+        } else if (input == Input.Right) {
+            this.StepRight();
+        }
     }
 }

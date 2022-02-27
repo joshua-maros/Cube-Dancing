@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: FeelTheSameChart
   m_EditorClassIdentifier: 
   segments:
-  - startTime: 0
-    endTime: 0
-    numMeasures: 0
+  - startTime: 2.338
+    endTime: 6.913
+    numMeasures: 2
+  - startTime: 6.913
+    endTime: 16.053
+    numMeasures: 4
+  - startTime: 16.053
+    endTime: 34.333
+    numMeasures: 8
+  - startTime: 34.333
+    endTime: 52.613
+    numMeasures: 8
+  - startTime: 52.613
+    endTime: 70.893
+    numMeasures: 8
   events:
   - tick: 0
     input: 0
@@ -28,4 +40,28 @@ MonoBehaviour:
     player: 0
   - tick: 72
     input: 1
+    player: 0
+  - tick: 96
+    input: 3
+    player: 0
+  - tick: 120
+    input: 3
+    player: 0
+  - tick: 144
+    input: 2
+    player: 0
+  - tick: 168
+    input: 2
+    player: 0
+  - tick: 192
+    input: 2
+    player: 0
+  - tick: 216
+    input: 2
+    player: 0
+  - tick: 240
+    input: 3
+    player: 0
+  - tick: 264
+    input: 3
     player: 0
