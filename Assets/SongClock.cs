@@ -27,7 +27,7 @@ public class SongClock : MonoBehaviour
 
     public float GetCurrentTick()
     {
-        float songTime = 2.0f * src.time + LATENCY;
+        float songTime = 4.0f * src.time + LATENCY;
         float currentTick = 0.0f;
         foreach (Segment seg in songChart.segments)
         {
