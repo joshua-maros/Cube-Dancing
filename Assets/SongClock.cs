@@ -9,7 +9,7 @@ public class SongClock : MonoBehaviour
     public const int TICKS_PER_MEASURE = 96;
     // How much the video lags behind the audio.
     public const float LATENCY = 0.00f;
-    AudioSource src;
+    public AudioSource src;
     public Chart songChart;
     public static SongClock instance;
 
