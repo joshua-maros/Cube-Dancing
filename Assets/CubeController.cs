@@ -30,14 +30,14 @@ public class CubeController : MonoBehaviour
         this.transform.Rotate(Vector3.back, 90.0f, Space.World);
     }
 
-    public void Step(Input input) {
-        if (input == Input.Up) {
+    public void Step(EventAction input) {
+        if (input == EventAction.Up) {
             this.StepUp();
-        } else if (input == Input.Down) {
+        } else if (input == EventAction.Down) {
             this.StepDown();
-        } else if (input == Input.Left) {
+        } else if (input == EventAction.Left) {
             this.StepLeft();
-        } else if (input == Input.Right) {
+        } else if (input == EventAction.Right) {
             this.StepRight();
         }
     }
