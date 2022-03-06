@@ -9,7 +9,7 @@ public class Chart : ScriptableObject
 {
     [SerializeField]
     public Segment[] segments;
-    public Event[] events;
+    public List<Event> events = new List<Event>();
 }
 
 [Serializable]
@@ -29,19 +29,44 @@ public struct Event
     public int tick;
 
     [SerializeField]
-    public Input input;
+    public EventAction input;
 
     [SerializeField]
     public Player player;
+
+    public Event(int tick, EventAction input, Player player)
+    {
+        this.tick = tick;
+        this.input = input;
+        this.player = player;
+    }
 }
 
 [Serializable]
-public enum Input
+public enum EventAction
 {
     Up,
     Down,
     Left,
     Right,
+}
+
+public static class InputExtensions
+{
+    public static EventAction Reverse(this EventAction input)
+    {
+        switch (input)
+        {
+            case EventAction.Up:
+                return EventAction.Down;
+            case EventAction.Down:
+                return EventAction.Up;
+            case EventAction.Left:
+                return EventAction.Right;
+            default: // Right
+                return EventAction.Left;
+        }
+    }
 }
 
 [Serializable]
