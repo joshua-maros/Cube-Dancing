@@ -11,8 +11,10 @@ public class NoteChartUI : MonoBehaviour
     List<GameObject> lines = new List<GameObject>();
     public Sprite up, down, left, right;
     int division = 4;
-    public const int NUM_LINES = 16;
+    public const int NUM_LINES = 32;
+    public const float LINE_SPACING = 30.0f;
     float lastTick = -1.0f;
+    float replayPoint = 0.0f;
     public CubeController p1;
 
     // Start is called before the first frame update
@@ -20,33 +22,114 @@ public class NoteChartUI : MonoBehaviour
     {
     }
 
+    public void Div1()
+    {
+        division = 1;
+    }
+
+    public void Div2()
+    {
+        division = 2;
+    }
+
+    public void Div4()
+    {
+        division = 4;
+    }
+
+    public void Div8()
+    {
+        division = 8;
+    }
+
+    public void Div16()
+    {
+        division = 16;
+    }
+
+    public void Div32()
+    {
+        division = 32;
+    }
+
     // Update is called once per frame
     void Update()
     {
         MakeLinesAndIcons();
         MovePlayer();
+        HandleEdits();
+        AudioSource s = SongClock.instance.src;
+        if (Input.GetButtonDown("PlayPause"))
+        {
+            if (s.isPlaying)
+            {
+                s.Pause();
+            }
+            else
+            {
+                s.Play();
+                replayPoint = s.time;
+            }
+        }
+        if (Input.GetButtonDown("EditorReplay"))
+        {
+            s.time = replayPoint;
+        }
+    }
+
+    void HandleEdits()
+    {
         bool makePressed = false;
         EventAction pressedAction = EventAction.Up;
+        Player pressedPlayer = Player.A;
         bool clearPressed = false;
         if (Input.GetButtonDown("P1Left"))
         {
             makePressed = true;
             pressedAction = EventAction.Left;
+            pressedPlayer = Player.A;
         }
         else if (Input.GetButtonDown("P1Right"))
         {
             makePressed = true;
             pressedAction = EventAction.Right;
+            pressedPlayer = Player.A;
         }
         else if (Input.GetButtonDown("P1Up"))
         {
             makePressed = true;
             pressedAction = EventAction.Up;
+            pressedPlayer = Player.A;
         }
         else if (Input.GetButtonDown("P1Down"))
         {
             makePressed = true;
             pressedAction = EventAction.Down;
+            pressedPlayer = Player.A;
+        }
+        else if (Input.GetButtonDown("P2Left"))
+        {
+            makePressed = true;
+            pressedAction = EventAction.Left;
+            pressedPlayer = Player.B;
+        }
+        else if (Input.GetButtonDown("P2Right"))
+        {
+            makePressed = true;
+            pressedAction = EventAction.Right;
+            pressedPlayer = Player.B;
+        }
+        else if (Input.GetButtonDown("P2Up"))
+        {
+            makePressed = true;
+            pressedAction = EventAction.Up;
+            pressedPlayer = Player.B;
+        }
+        else if (Input.GetButtonDown("P2Down"))
+        {
+            makePressed = true;
+            pressedAction = EventAction.Down;
+            pressedPlayer = Player.B;
         }
         else if (Input.GetButtonDown("EditorClear"))
         {
@@ -54,20 +137,19 @@ public class NoteChartUI : MonoBehaviour
         }
 
         float tick = Input.mousePosition.y - GetComponent<RectTransform>().offsetMin.y;
-        // Each line is separated by 100 pixels.
-        tick /= 100.0f;
+        tick /= LINE_SPACING;
         tick *= TicksPerLine();
         if (tick <= 0.0f) return;
         tick += SongClock.instance.GetCurrentTick();
 
         var events = SongClock.instance.songChart.events;
         int closest = -1;
-        float closestDistance = 100.0f;
+        float closestDistance = LINE_SPACING;
         for (int i = events.Count; i > 0; i--)
         {
             var e = events[i - 1];
             var distance = Mathf.Abs(e.tick - tick);
-            if (distance <= 48.0f / division && distance < closestDistance)
+            if (distance <= 48.0f / division && distance < closestDistance && (clearPressed || e.player == pressedPlayer))
             {
                 closest = i - 1;
                 closestDistance = distance;
@@ -79,7 +161,7 @@ public class NoteChartUI : MonoBehaviour
             if (closest == -1)
             {
                 tick = Mathf.Round(tick / TicksPerLine()) * TicksPerLine();
-                events.Add(new Event(Mathf.RoundToInt(tick), pressedAction, Player.A));
+                events.Add(new Event(Mathf.RoundToInt(tick), pressedAction, pressedPlayer));
             }
             else
             {
@@ -129,14 +211,16 @@ public class NoteChartUI : MonoBehaviour
             {
                 if (e.tick > tickNow && e.tick <= this.lastTick)
                 {
-                    p1.Step(e.input.Reverse());
+                    if (e.player == Player.A)
+                        p1.Step(e.input.Reverse());
                 }
             }
             else
             {
                 if (e.tick > this.lastTick && e.tick <= tickNow)
                 {
-                    p1.Step(e.input);
+                    if (e.player == Player.A)
+                        p1.Step(e.input);
                 }
             }
         }
@@ -162,10 +246,15 @@ public class NoteChartUI : MonoBehaviour
         GameObject line = Instantiate(linePrefab.gameObject, this.transform);
         MoveIcon(line, tick);
         var timeInMeasure = (tick / 96.0f) % 1.0f;
+        var timeInBeat = (tick / (96.0f / 4.0f)) % 1.0f;
         var s = line.transform.localScale;
         if (timeInMeasure < 0.001f || timeInMeasure > 0.999f)
         {
             s.y = 10.0f;
+        }
+        else if (timeInBeat < 0.001f || timeInBeat > 0.999f)
+        {
+            s.y = 4.0f;
         }
         else
         {
@@ -179,6 +268,13 @@ public class NoteChartUI : MonoBehaviour
     {
         GameObject icon = Instantiate(iconPrefab.gameObject, this.transform);
         MoveIcon(icon, e.tick);
+        RectTransform rt = icon.GetComponent<RectTransform>();
+        if (e.player == Player.B)
+        {
+            var p = rt.anchoredPosition;
+            p.x += 64.0f;
+            rt.anchoredPosition = p;
+        }
         Image image = icon.GetComponent<Image>();
         switch (e.input)
         {
@@ -209,6 +305,6 @@ public class NoteChartUI : MonoBehaviour
     public float PosForTick(float tick)
     {
         float tickNow = SongClock.instance.GetCurrentTick();
-        return (tick - tickNow) * 100.0f * this.division / 96.0f;
+        return (tick - tickNow) * LINE_SPACING * this.division / 96.0f;
     }
 }
