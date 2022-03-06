@@ -41,108 +41,48 @@ MonoBehaviour:
   - tick: 72
     input: 0
     player: 0
-  - tick: 318
-    input: 0
+  - tick: 96
+    input: 1
     player: 0
-  - tick: 156
-    input: 0
+  - tick: 120
+    input: 1
     player: 0
-  - tick: 504
+  - tick: 144
+    input: 1
+    player: 0
+  - tick: 168
+    input: 1
+    player: 0
+  - tick: 192
     input: 3
+    player: 0
+  - tick: 240
+    input: 3
+    player: 0
+  - tick: 288
+    input: 3
+    player: 0
+  - tick: 336
+    input: 2
+    player: 0
+  - tick: 360
+    input: 1
+    player: 0
+  - tick: 348
+    input: 2
+    player: 0
+  - tick: 384
+    input: 2
+    player: 0
+  - tick: 432
+    input: 2
+    player: 0
+  - tick: 480
+    input: 0
     player: 0
   - tick: 528
     input: 3
     player: 0
   - tick: 552
-    input: 3
-    player: 0
-  - tick: 576
-    input: 3
-    player: 0
-  - tick: 600
-    input: 3
-    player: 0
-  - tick: 648
-    input: 3
-    player: 0
-  - tick: 1056
-    input: 3
-    player: 0
-  - tick: 1080
-    input: 3
-    player: 0
-  - tick: 1104
-    input: 3
-    player: 0
-  - tick: 1128
-    input: 3
-    player: 0
-  - tick: 1152
-    input: 3
-    player: 0
-  - tick: 1176
-    input: 3
-    player: 0
-  - tick: 1200
-    input: 3
-    player: 0
-  - tick: 1224
-    input: 3
-    player: 0
-  - tick: 1272
-    input: 3
-    player: 0
-  - tick: 1296
-    input: 3
-    player: 0
-  - tick: 1344
-    input: 3
-    player: 0
-  - tick: 1368
-    input: 3
-    player: 0
-  - tick: 1416
-    input: 3
-    player: 0
-  - tick: 1440
-    input: 3
-    player: 0
-  - tick: 1464
-    input: 3
-    player: 0
-  - tick: 1488
-    input: 3
-    player: 0
-  - tick: 1512
-    input: 3
-    player: 0
-  - tick: 1536
-    input: 3
-    player: 0
-  - tick: 1560
-    input: 3
-    player: 0
-  - tick: 1584
-    input: 3
-    player: 0
-  - tick: 1608
-    input: 3
-    player: 0
-  - tick: 1632
-    input: 3
-    player: 0
-  - tick: 1656
-    input: 3
-    player: 0
-  - tick: 1680
-    input: 3
-    player: 0
-  - tick: 1704
-    input: 3
-    player: 0
-  - tick: 1728
-    input: 3
-    player: 0
-  - tick: 1752
     input: 3
     player: 0
