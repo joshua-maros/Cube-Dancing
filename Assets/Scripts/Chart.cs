@@ -45,7 +45,7 @@ public struct Event
 [Serializable]
 public enum EventAction
 {
-    Up,
+       Up,
     Down,
     Left,
     Right,
@@ -58,11 +58,15 @@ public static class InputExtensions
         switch (input)
         {
             case EventAction.Up:
+                
                 return EventAction.Down;
             case EventAction.Down:
+                
                 return EventAction.Up;
+
             case EventAction.Left:
                 return EventAction.Right;
+
             default: // Right
                 return EventAction.Left;
         }

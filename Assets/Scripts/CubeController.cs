@@ -8,24 +8,28 @@ public class CubeController : MonoBehaviour
 
     public void StepUp()
     {
+        Debug.Log("StepUP");
         this.transform.Translate(Vector3.forward, Space.World);
         this.transform.Rotate(Vector3.right, 90.0f, Space.World);
     }
 
     public void StepDown()
     {
+        Debug.Log("StepDOWN");
         this.transform.Translate(Vector3.back, Space.World);
         this.transform.Rotate(Vector3.left, 90.0f, Space.World);
     }
 
     public void StepLeft()
     {
+        Debug.Log("StepLEFT");
         this.transform.Translate(Vector3.left, Space.World);
         this.transform.Rotate(Vector3.forward, 90.0f, Space.World);
     }
 
     public void StepRight()
     {
+        Debug.Log("StepRIGHT");
         this.transform.Translate(Vector3.right, Space.World);
         this.transform.Rotate(Vector3.back, 90.0f, Space.World);
     }

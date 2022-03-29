@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200424701e0d8a481a28ff46632bd0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  src: {fileID: 0}
   songChart: {fileID: 11400000, guid: 6304423d6246b2dc586ea245f71c1bce, type: 2}
 --- !u!1 &705507993
 GameObject:
