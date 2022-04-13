@@ -26,28 +26,28 @@ public class CubeController : MonoBehaviour
         float old = animationTimer;
         animationTimer += Time.deltaTime;
         animationTimer = Mathf.Min(animationTimer, 0.08f);
-        float progress = animationTimer / 0.08f;
-        Vector3 offsetPosition = previousTransform.localPosition;
+        float progress = 1.5f - 0.5f * (animationTimer / 0.08f);
+        Vector3 offset = previousTransform.localPosition;
         Vector3 rotationAxis = Vector3.zero;
         switch(animationAction) {
             case EventAction.Up:
-                offsetPosition += Vector3.forward;
+                offset = Vector3.forward;
                 rotationAxis = Vector3.right;
                 break;
             case EventAction.Down:
-                offsetPosition += Vector3.back;
+                offset = Vector3.back;
                 rotationAxis = Vector3.left;
                 break;
             case EventAction.Right:
-                offsetPosition += Vector3.right;
+                offset = Vector3.right;
                 rotationAxis = Vector3.back;
                 break;
             case EventAction.Left:
-                offsetPosition += Vector3.left;
+                offset = Vector3.left;
                 rotationAxis = Vector3.forward;
                 break;
         }
-        transform.localPosition = Vector3.Lerp(previousTransform.localPosition, offsetPosition, progress);
+        transform.localPosition = previousTransform.localPosition + progress * offset;
         transform.localRotation = Quaternion.AngleAxis(90.0f * progress, rotationAxis) * previousTransform.localRotation;
     }
 
