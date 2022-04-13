@@ -6,7 +6,7 @@ public class Indicator : MonoBehaviour
 {
     private GridCoordinate coord;
     public GameObject inside;
-    const float LOOKAHEAD = 36.0f;
+    const float LOOKAHEAD = SongClock.TICKS_PER_MEASURE / 4;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +23,8 @@ public class Indicator : MonoBehaviour
         var start = SongClock.instance.GetCurrentTick();
         var end = start + LOOKAHEAD;
         var futureEvents = SongClock.instance.songChart.GetEventsInRange(start, end);
-        var pos = CubeController.instance.coord.Clone();
         foreach (var eventt in futureEvents) {
-            Debug.Log(pos.GetX());
-            pos.Offset(eventt.input);
-            if (pos.Equals(coord)) {
+            if (eventt.position.Equals(coord)) {
                 var timeUntilHappening = (eventt.tick - start) / LOOKAHEAD;
                 inside.transform.localScale = new Vector3(1, 1, 1) * (1.0f - timeUntilHappening);
                 break;

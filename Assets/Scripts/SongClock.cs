@@ -18,6 +18,7 @@ public class SongClock : MonoBehaviour
     {
         src = GetComponent<AudioSource>();
         instance = this;
+        songChart.AnnotatePositions();
     }
 
     // Update is called once per frame

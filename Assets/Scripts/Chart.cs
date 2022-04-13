@@ -49,6 +49,17 @@ public class Chart : ScriptableObject
         }
         return result;
     }
+
+    public void AnnotatePositions() {
+        events.Sort((x, y) => x.tick.CompareTo(y.tick));
+        GridCoordinate pos = new GridCoordinate(0, 0);
+        for(int i = 0; i < events.Count; i++) {
+            Event eventt = events[i];
+            pos.Offset(eventt.input);
+            eventt.position = pos.Clone();
+            events[i] = eventt;
+        }
+    }
 }
 
 [Serializable]
@@ -73,11 +84,14 @@ public struct Event
     [SerializeField]
     public Player player;
 
+    public GridCoordinate position;
+
     public Event(int tick, EventAction input, Player player)
     {
         this.tick = tick;
         this.input = input;
         this.player = player;
+        this.position = new GridCoordinate(0, 0);
     }
 }
 
