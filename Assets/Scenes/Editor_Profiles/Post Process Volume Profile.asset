@@ -30,7 +30,7 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 5.81
+    value: 6.56
   anamorphicRatio:
     overrideState: 0
     value: 0
@@ -306,14 +306,14 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 1
-    value: {x: 0.5022121, y: 0.87284, z: 1, w: 0.03246753}
+    overrideState: 0
+    value: {x: 0.5022121, y: 0.87284, z: 1, w: 0.010111301}
   gamma:
     overrideState: 1
-    value: {x: 0.87589526, y: 0.6700597, z: 1, w: 0.048701294}
+    value: {x: 0.751483, y: 0.8370687, z: 1, w: 0.048701294}
   gain:
     overrideState: 1
-    value: {x: 0.3696335, y: 0.6950785, z: 1, w: 1}
+    value: {x: 0.41005963, y: 0.8644894, z: 1, w: 1}
   masterCurve:
     overrideState: 0
     value:

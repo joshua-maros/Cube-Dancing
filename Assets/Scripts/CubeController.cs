@@ -75,6 +75,8 @@ public class CubeController : MonoBehaviour
     }
 
     public void Step(EventAction input) {
+        animationTimer = 0.1f;
+        Update();
         coord.Offset(input);
         scoreSystem.onInput(input);
         animationAction = input;
