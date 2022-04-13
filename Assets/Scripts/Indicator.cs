@@ -26,7 +26,8 @@ public class Indicator : MonoBehaviour
         foreach (var eventt in futureEvents) {
             if (eventt.position.Equals(coord)) {
                 var timeUntilHappening = (eventt.tick - start) / LOOKAHEAD;
-                inside.transform.localScale = new Vector3(1, 1, 1) * (1.0f - timeUntilHappening);
+                var factor = Mathf.Pow(1.0f - timeUntilHappening, 3.0f);
+                inside.transform.localScale = new Vector3(1, 1, 1) * factor;
                 break;
             } else {
                 inside.transform.localScale = new Vector3(0, 0, 0);
