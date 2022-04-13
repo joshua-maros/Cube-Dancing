@@ -29,6 +29,7 @@ public class ScoreSystem : MonoBehaviour
 
     //CANVAS
     public Text scoreText;
+    float scorePulse = 0.0f;
     public Text multiText;
 
 
@@ -56,6 +57,8 @@ public class ScoreSystem : MonoBehaviour
     {
 
         scoreText.text = currentScore.ToString();
+        scoreText.gameObject.transform.localScale = new Vector3(1, 1, 1) * (0.3f * this.scorePulse + 1.0f);
+        this.scorePulse = Mathf.Max(this.scorePulse - Time.deltaTime * 8.0f, 0.0f);
         multiText.text = "X" + currentMultiplier.ToString();
         Debug.Log(currentTick);
 
@@ -65,7 +68,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void NoteHit()
     {
-
+            scorePulse = 1.0f;
             Debug.Log("HIT ON TIME");
             currentScore += point;
             scoreText.text = currentScore.ToString();
@@ -90,8 +93,9 @@ public class ScoreSystem : MonoBehaviour
         {
             NoteHit();
         }
-        else
+        else {
             NoteMissed();
+        }
 
 
 
