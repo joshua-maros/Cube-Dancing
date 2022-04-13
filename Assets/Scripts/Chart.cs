@@ -40,7 +40,15 @@ public class Chart : ScriptableObject
 
     }
 
-
+    public List<Event> GetEventsInRange(float startTick, float endTick) {
+        List<Event> result = new List<Event>();
+        foreach (Event eventt in events) {
+            if (eventt.tick >= startTick && eventt.tick <= endTick) {
+                result.Add(eventt);
+            }
+        }
+        return result;
+    }
 }
 
 [Serializable]

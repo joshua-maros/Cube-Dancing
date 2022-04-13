@@ -12,7 +12,7 @@ public class IndicatorSpawner : MonoBehaviour
     {
         for (int x = -GRID_SIZE; x <= GRID_SIZE; x++) {
             for (int z = -GRID_SIZE; z <= GRID_SIZE; z++) {
-                Object.Instantiate(indicator, new Vector3(x + 1, 0, z + 1), Quaternion.identity, transform);
+                Object.Instantiate(indicator, new Vector3(x + 0.5f, 0, z + 0.5f), Quaternion.identity, transform);
             }
         }
     }
