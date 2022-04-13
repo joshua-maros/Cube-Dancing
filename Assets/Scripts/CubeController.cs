@@ -11,61 +11,75 @@ public class CubeController : MonoBehaviour
     public ScoreSystem scoreSystem;
     public static CubeController instance;
     public GridCoordinate coord = new GridCoordinate(0, 0);
+
+    private EventAction animationAction;
+    private float animationTimer = 1.0f;
+    private TransformData previousTransform;
  
-
-
-
-    void Awake()
-    {
-       
-        
-
-    }
-
-
     void Start() {
       instance = this;
+      previousTransform = transform.Clone();
+      previousTransform.localPosition -= Vector3.forward;
+    }
+
+    void Update() {
+        float old = animationTimer;
+        animationTimer += Time.deltaTime;
+        animationTimer = Mathf.Min(animationTimer, 0.08f);
+        float progress = animationTimer / 0.08f;
+        Vector3 offsetPosition = previousTransform.localPosition;
+        Vector3 rotationAxis = Vector3.zero;
+        switch(animationAction) {
+            case EventAction.Up:
+                offsetPosition += Vector3.forward;
+                rotationAxis = Vector3.right;
+                break;
+            case EventAction.Down:
+                offsetPosition += Vector3.back;
+                rotationAxis = Vector3.left;
+                break;
+            case EventAction.Right:
+                offsetPosition += Vector3.right;
+                rotationAxis = Vector3.back;
+                break;
+            case EventAction.Left:
+                offsetPosition += Vector3.left;
+                rotationAxis = Vector3.forward;
+                break;
+        }
+        transform.localPosition = Vector3.Lerp(previousTransform.localPosition, offsetPosition, progress);
+        transform.localRotation = Quaternion.AngleAxis(90.0f * progress, rotationAxis) * previousTransform.localRotation;
     }
 
     public void StepUp()
     {
-        this.transform.Translate(Vector3.forward, Space.World);
-        this.transform.Rotate(Vector3.right, 90.0f, Space.World);
+        this.Step(EventAction.Up);
         scoreSystem.onInput(EventAction.Up);
      }
 
     public void StepDown()
     {
-        this.transform.Translate(Vector3.back, Space.World);
-        this.transform.Rotate(Vector3.left, 90.0f, Space.World);
+        this.Step(EventAction.Down);
         scoreSystem.onInput(EventAction.Down);
     }
 
     public void StepLeft()
     {
-        this.transform.Translate(Vector3.left, Space.World);
-        this.transform.Rotate(Vector3.forward, 90.0f, Space.World);
+        this.Step(EventAction.Left);
         scoreSystem.onInput(EventAction.Left);
     }
 
     public void StepRight()
     {
-        this.transform.Translate(Vector3.right, Space.World);
-        this.transform.Rotate(Vector3.back, 90.0f, Space.World);
-        scoreSystem.onInput(EventAction.Right);
+        this.Step(EventAction.Right);
     }
 
     public void Step(EventAction input) {
         coord.Offset(input);
-        if (input == EventAction.Up) {
-            this.StepUp();
-        } else if (input == EventAction.Down) {
-            this.StepDown();
-        } else if (input == EventAction.Left) {
-            this.StepLeft();
-        } else if (input == EventAction.Right) {
-            this.StepRight();
-        }
+        scoreSystem.onInput(input);
+        animationAction = input;
+        animationTimer = 0.0f;
+        previousTransform = transform.Clone();
     }
 
 
