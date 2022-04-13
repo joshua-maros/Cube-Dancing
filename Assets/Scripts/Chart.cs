@@ -5,11 +5,42 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Chart", menuName = "Chart", order = 1)]
 [Serializable]
+
+
 public class Chart : ScriptableObject
 {
+
+ 
+
     [SerializeField]
     public Segment[] segments;
     public List<Event> events = new List<Event>();
+
+    public Event getter(float tick)
+    {
+        Event closest = events[0];
+
+       
+        foreach(Event eventt in events )
+        {
+            var  temp = tick - closest.tick;
+            temp = Mathf.Abs(temp);
+
+            var temp2 = tick - eventt.tick;
+            temp2 = Mathf.Abs(temp2);
+
+            if (temp > temp2)
+            {
+                closest = eventt;
+            }
+
+        }
+
+        return closest;
+
+    }
+
+
 }
 
 [Serializable]
@@ -79,3 +110,4 @@ public enum Player
     A,
     B,
 }
+

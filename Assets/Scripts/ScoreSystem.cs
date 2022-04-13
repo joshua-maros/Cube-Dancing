@@ -27,7 +27,6 @@ public class ScoreSystem : MonoBehaviour
     private int currentEventTick;
   
 
-
     //CANVAS
     public Text scoreText;
     public Text multiText;
@@ -35,39 +34,31 @@ public class ScoreSystem : MonoBehaviour
 
     //MULTIPLIER SUCCESS
 
+
     
     //@ START
     void Start()
     {
-           //EXTERNAL SCRIPT CALLS
-        currentTick = GameObject.Find("FeelTheSame").GetComponent<SongClock>().GetCurrentTick();
+        //EXTERNAL SCRIPT CALLS
+        currentTick = SongClock.instance.GetCurrentTick();
 
 
         scoreText.text = "0";
         multiText.text = "X" + "0";
 
 
-        scoreText.text = currentScore.ToString();
-        multiText.text = "X" + currentMultiplier.ToString();
-        //currentTick = songClock.GetCurrentTick();
+       
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        int i = 0;
 
-   
-
+        scoreText.text = currentScore.ToString();
+        multiText.text = "X" + currentMultiplier.ToString();
         Debug.Log(currentTick);
-        //cycle this through events as they occur
-        //take current event compare to nearest with distance
-        if (currentTick ==-1)
-        {
-            NoteHit();
-        }
-        else
-            NoteMissed();
+
     }
     
 
@@ -75,30 +66,34 @@ public class ScoreSystem : MonoBehaviour
     public void NoteHit()
     {
 
-        //if (Mathf.Abs(withinRange()) < .5f)
-       // {
             Debug.Log("HIT ON TIME");
             currentScore += point;
             scoreText.text = currentScore.ToString();
 
-       // }
     }
 
     public void NoteMissed()
     {
-
-       // if (Mathf.Abs(withinRange()) > .5f)
-       // {
             Debug.Log("MISSED BEAT");
             scoreText.text = currentScore.ToString();
-       // }
     }
 
 
-    public float withinRange()
+  
+
+    public void onInput(EventAction input)
     {
 
-        return currentTick - nearestTick;
+        var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
+
+        if (closestEvent.input == input)
+        {
+            NoteHit();
+        }
+        else
+            NoteMissed();
+
+
 
     }
 }

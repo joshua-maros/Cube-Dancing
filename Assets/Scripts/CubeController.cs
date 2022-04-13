@@ -2,22 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class CubeController : MonoBehaviour
 {
-    void Start() { }
+
+    public ScoreSystem scoreSystem;
+ 
+
+
+
+    void Awake()
+    {
+       
+        
+
+    }
+
+
+    void Start() {
+      
+    }
 
     public void StepUp()
     {
         Debug.Log("StepUP");
         this.transform.Translate(Vector3.forward, Space.World);
         this.transform.Rotate(Vector3.right, 90.0f, Space.World);
-    }
+
+        scoreSystem.onInput(EventAction.Up);
+
+     }
 
     public void StepDown()
     {
         Debug.Log("StepDOWN");
         this.transform.Translate(Vector3.back, Space.World);
         this.transform.Rotate(Vector3.left, 90.0f, Space.World);
+        scoreSystem.onInput(EventAction.Down);
     }
 
     public void StepLeft()
@@ -25,6 +48,7 @@ public class CubeController : MonoBehaviour
         Debug.Log("StepLEFT");
         this.transform.Translate(Vector3.left, Space.World);
         this.transform.Rotate(Vector3.forward, 90.0f, Space.World);
+        scoreSystem.onInput(EventAction.Left);
     }
 
     public void StepRight()
@@ -32,6 +56,7 @@ public class CubeController : MonoBehaviour
         Debug.Log("StepRIGHT");
         this.transform.Translate(Vector3.right, Space.World);
         this.transform.Rotate(Vector3.back, 90.0f, Space.World);
+        scoreSystem.onInput(EventAction.Right);
     }
 
     public void Step(EventAction input) {
@@ -45,4 +70,7 @@ public class CubeController : MonoBehaviour
             this.StepRight();
         }
     }
+
+
+
 }
