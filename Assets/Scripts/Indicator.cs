@@ -23,15 +23,24 @@ public class Indicator : MonoBehaviour
         var start = SongClock.instance.GetCurrentTick();
         var end = start + LOOKAHEAD;
         var futureEvents = SongClock.instance.songChart.GetEventsInRange(start, end);
+        var scale = 0.0f;
         foreach (var eventt in futureEvents) {
             if (eventt.position.Equals(coord)) {
                 var timeUntilHappening = (eventt.tick - start) / LOOKAHEAD;
-                var factor = Mathf.Pow(1.0f - timeUntilHappening, 3.0f);
-                inside.transform.localScale = new Vector3(1, 1, 1) * factor;
+                scale = Mathf.Pow(1.0f - timeUntilHappening, 3.0f);
                 break;
-            } else {
-                inside.transform.localScale = new Vector3(0, 0, 0);
             }
         }
+        inside.transform.localScale = new Vector3(1, 1, 1) * scale;
+        float height = 0.0f;
+        foreach (var ripple in Ripples.instance.ripples) {
+            float factor = 0.5f * (30.0f * ripple.progress - (ripple.center - transform.position).magnitude);
+            if (factor >= -1.0f && factor <= 1.0f) {
+                height += 0.1f * (Mathf.Cos(Mathf.PI * factor) + 1.0f);
+            }
+        }
+        Vector3 p = transform.localPosition;
+        p.y = height;
+        transform.localPosition = p;
     }
 }

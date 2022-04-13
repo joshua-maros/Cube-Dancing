@@ -1853,6 +1853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1440555280}
   - component: {fileID: 1440555281}
+  - component: {fileID: 1440555282}
   m_Layer: 0
   m_Name: Indicators
   m_TagString: Untagged
@@ -1887,6 +1888,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 4027085467495185126, guid: 0582b9357a291f674aad23d59d6ad080, type: 3}
+--- !u!114 &1440555282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440555279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb495da7a8f91af80a820eab5577e06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastRippleTriggered: -1
+  postProcessing: {fileID: 817460320}
 --- !u!1 &1453169766
 GameObject:
   m_ObjectHideFlags: 0
