@@ -11,10 +11,7 @@ public class Indicator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coord = new GridCoordinate(
-            ((int) (transform.position.x - 0.5f)),
-            ((int) (transform.position.z - 0.5f))
-        );
+        coord = new GridCoordinate(transform.position);
     }
 
     // Update is called once per frame

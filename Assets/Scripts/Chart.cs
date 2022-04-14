@@ -52,11 +52,17 @@ public class Chart : ScriptableObject
 
     public void AnnotatePositions() {
         events.Sort((x, y) => x.tick.CompareTo(y.tick));
-        GridCoordinate pos = new GridCoordinate(0, 0);
+        GridCoordinate p1 = new GridCoordinate(0, 0);
+        GridCoordinate p2 = new GridCoordinate(0, -2);
         for(int i = 0; i < events.Count; i++) {
             Event eventt = events[i];
-            pos.Offset(eventt.input);
-            eventt.position = pos.Clone();
+            if (eventt.player == Player.A) {
+                p1.Offset(eventt.input);
+                eventt.position = p1.Clone();
+            } else {
+                p2.Offset(eventt.input);
+                eventt.position = p2.Clone();
+            }
             events[i] = eventt;
         }
     }

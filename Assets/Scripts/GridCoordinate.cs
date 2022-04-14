@@ -1,9 +1,16 @@
+using UnityEngine;
+
 public class GridCoordinate {
     private int x, z;
 
     public GridCoordinate(int x, int z) {
         this.x = x;
         this.z = z;
+    }
+
+    public GridCoordinate(Vector3 realWorldPosition) {
+        this.x = ((int) (realWorldPosition.x - 0.5f));
+        this.z = ((int) (realWorldPosition.z - 0.5f));
     }
 
     public bool Equals(GridCoordinate other) {

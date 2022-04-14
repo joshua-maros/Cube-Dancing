@@ -13,9 +13,7 @@ public class NoteChartUI : MonoBehaviour
     int division = 4;
     public const int NUM_LINES = 32;
     public const float LINE_SPACING = 30.0f;
-    float lastTick = -1.0f;
     float replayPoint = 0.0f;
-    public CubeController p1;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +54,6 @@ public class NoteChartUI : MonoBehaviour
     void Update()
     {
         MakeLinesAndIcons();
-        MovePlayer();
         HandleEdits();
         AudioSource s = SongClock.instance.src;
         if (Input.GetButtonDown("PlayPause"))
@@ -199,32 +196,6 @@ public class NoteChartUI : MonoBehaviour
                 MakeEventIcon(e);
             }
         }
-    }
-
-    void MovePlayer()
-    {
-        var tickNow = SongClock.instance.GetCurrentTick();
-        bool wentBackwards = tickNow < this.lastTick;
-        foreach (var e in SongClock.instance.songChart.events)
-        {
-            if (wentBackwards)
-            {
-                if (e.tick > tickNow && e.tick <= this.lastTick)
-                {
-                    if (e.player == Player.A)
-                        p1.Step(e.input.Reverse());
-                }
-            }
-            else
-            {
-                if (e.tick > this.lastTick && e.tick <= tickNow)
-                {
-                    if (e.player == Player.A)
-                        p1.Step(e.input);
-                }
-            }
-        }
-        this.lastTick = tickNow;
     }
 
     void ClearLinesAndIcons()

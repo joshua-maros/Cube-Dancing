@@ -10,7 +10,7 @@ public class CubeController : MonoBehaviour
 
     public ScoreSystem scoreSystem;
     public static CubeController instance;
-    public GridCoordinate coord = new GridCoordinate(0, 0);
+    public GridCoordinate coord;
 
     private EventAction animationAction;
     private float animationTimer = 1.0f;
@@ -20,6 +20,7 @@ public class CubeController : MonoBehaviour
       instance = this;
       previousTransform = transform.Clone();
       previousTransform.localPosition -= Vector3.forward;
+      coord = new GridCoordinate(transform.position);
     }
 
     void Update() {
