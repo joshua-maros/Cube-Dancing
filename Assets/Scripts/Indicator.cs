@@ -22,7 +22,7 @@ public class Indicator : MonoBehaviour
         var futureEvents = SongClock.instance.songChart.GetEventsInRange(start, end);
         var scale = 0.0f;
         foreach (var eventt in futureEvents) {
-            if (eventt.position.Equals(coord)) {
+            if (eventt.position.Equals(coord) && eventt.player == Player.A) {
                 var timeUntilHappening = (eventt.tick - start) / LOOKAHEAD;
                 scale = Mathf.Pow(1.0f - timeUntilHappening, 3.0f);
                 break;
