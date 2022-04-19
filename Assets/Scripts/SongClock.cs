@@ -17,6 +17,8 @@ public class SongClock : MonoBehaviour
     void Start()
     {
         src = GetComponent<AudioSource>();
+        src.clip = songChart.song;
+        src.Play();
         instance = this;
         songChart.AnnotatePositions();
     }

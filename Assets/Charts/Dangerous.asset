@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
+  m_Name: Dangerous
+  m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: a2db7f995286f342496ebe994181ef35, type: 3}
+  segments:
+  - startTime: 0.083
+    endTime: 53.658
+    numMeasures: 23
+  events: []

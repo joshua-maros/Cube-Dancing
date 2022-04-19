@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
   m_Name: FeelTheSameChart
   m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: be68dec9406365fe79686029c784b98d, type: 3}
   segments:
   - startTime: 2.338
     endTime: 6.913

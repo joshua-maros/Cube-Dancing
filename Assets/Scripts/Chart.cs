@@ -9,8 +9,8 @@ using UnityEngine;
 
 public class Chart : ScriptableObject
 {
-
- 
+    [SerializeField]
+    public AudioClip song;
 
     [SerializeField]
     public Segment[] segments;

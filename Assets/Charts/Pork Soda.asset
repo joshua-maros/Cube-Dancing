@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
   m_Name: Pork Soda
   m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: 370bcc6da7ce02bd9a5e8eed6e6a98fb, type: 3}
   segments:
   - startTime: 0.624
     endTime: 50.633

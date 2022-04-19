@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
   m_Name: What You Know
   m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: 9f07696de8d8881d0ba32e31f5994ac7, type: 3}
   segments:
   - startTime: 0.377
     endTime: 14.215

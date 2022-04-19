@@ -423,7 +423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 940575268}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &181391633
 MeshRenderer:
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 503888497}
-  songChart: {fileID: 11400000, guid: d136648cf9e0f36dc860d3ac310c3171, type: 2}
+  songChart: {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
 --- !u!1 &562846843
 GameObject:
   m_ObjectHideFlags: 0
