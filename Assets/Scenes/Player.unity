@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 503888497}
-  songChart: {fileID: 11400000, guid: eb511d01c4a233c84b2a71d1295ae646, type: 2}
+  songChart: {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

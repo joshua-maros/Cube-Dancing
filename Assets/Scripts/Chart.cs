@@ -11,6 +11,7 @@ public class Chart : ScriptableObject
 {
     [SerializeField]
     public AudioClip song;
+    public int difficultyOutOfTen = 0;
 
     [SerializeField]
     public Segment[] segments;

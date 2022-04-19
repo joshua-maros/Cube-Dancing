@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pork Soda
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 370bcc6da7ce02bd9a5e8eed6e6a98fb, type: 3}
+  difficultyOutOfTen: 4
   segments:
   - startTime: 0.624
     endTime: 50.633
