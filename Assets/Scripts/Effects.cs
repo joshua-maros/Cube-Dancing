@@ -5,16 +5,21 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class Ripples : MonoBehaviour
+public class Effects : MonoBehaviour
 {
-    public static Ripples instance;
+    public static Effects instance;
     public List<Ripple> ripples = new List<Ripple>();
     public int lastRippleTriggered = -1;
     public PostProcessVolume postProcessing;
     const float FLASH_DURATION = 0.25f;
+    float errorFlash = 0.0f;
 
     void Start() {
         instance = this;
+    }
+
+    public void Error() {
+        errorFlash = FLASH_DURATION;
     }
 
     void Update() {
@@ -38,6 +43,10 @@ public class Ripples : MonoBehaviour
         } else {
             settings.postExposure.value = 0.0f;
         }
+        var vignette = postProcessing.profile.GetSetting<Vignette>();
+        vignette.intensity.value = errorFlash / FLASH_DURATION;
+        errorFlash -= Time.deltaTime;
+        if (errorFlash < 0.0f) errorFlash = 0.0f;
 
         var t = (int) ft;
         if (t % (SongClock.TICKS_PER_MEASURE / 2) == SongClock.TICKS_PER_MEASURE / 4) {

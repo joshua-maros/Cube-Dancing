@@ -30,7 +30,7 @@ public class Indicator : MonoBehaviour
         }
         inside.transform.localScale = new Vector3(1, 1, 1) * scale;
         float height = 0.0f;
-        foreach (var ripple in Ripples.instance.ripples) {
+        foreach (var ripple in Effects.instance.ripples) {
             float factor = 0.5f * (30.0f * ripple.progress - (ripple.center - transform.position).magnitude);
             if (factor >= -1.0f && factor <= 1.0f) {
                 height += 0.1f * (Mathf.Cos(Mathf.PI * factor) + 1.0f);

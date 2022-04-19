@@ -47,6 +47,8 @@ public class CubeController : MonoBehaviour
                 offset = Vector3.left;
                 rotationAxis = Vector3.forward;
                 break;
+            default:
+                return;
         }
         transform.localPosition = previousTransform.localPosition + progress * offset;
         transform.localRotation = Quaternion.AngleAxis(90.0f * progress, rotationAxis) * previousTransform.localRotation;
@@ -55,19 +57,16 @@ public class CubeController : MonoBehaviour
     public void StepUp()
     {
         this.Step(EventAction.Up);
-        scoreSystem.onInput(EventAction.Up);
      }
 
     public void StepDown()
     {
         this.Step(EventAction.Down);
-        scoreSystem.onInput(EventAction.Down);
     }
 
     public void StepLeft()
     {
         this.Step(EventAction.Left);
-        scoreSystem.onInput(EventAction.Left);
     }
 
     public void StepRight()
@@ -79,7 +78,6 @@ public class CubeController : MonoBehaviour
         animationTimer = 0.1f;
         Update();
         coord.Offset(input);
-        scoreSystem.onInput(input);
         animationAction = input;
         animationTimer = 0.0f;
         previousTransform = transform.Clone();
