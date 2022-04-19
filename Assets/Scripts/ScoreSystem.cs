@@ -55,30 +55,29 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         scoreText.text = currentScore.ToString();
         scoreText.gameObject.transform.localScale = new Vector3(1, 1, 1) * (0.3f * this.scorePulse + 1.0f);
         this.scorePulse = Mathf.Max(this.scorePulse - Time.deltaTime * 8.0f, 0.0f);
         multiText.text = "X" + currentMultiplier.ToString();
         Debug.Log(currentTick);
-
     }
     
 
 
     public void NoteHit()
     {
-            scorePulse = 1.0f;
-            Debug.Log("HIT ON TIME");
-            currentScore += point;
-            scoreText.text = currentScore.ToString();
+        scorePulse = 1.0f;
+        Debug.Log("HIT ON TIME");
+        currentScore += point;
+        scoreText.text = currentScore.ToString();
 
     }
 
     public void NoteMissed()
     {
-            Debug.Log("MISSED BEAT");
-            scoreText.text = currentScore.ToString();
+        Debug.Log("MISSED BEAT");
+        scoreText.text = currentScore.ToString();
+        Effects.instance.Error();
     }
 
 
@@ -86,18 +85,12 @@ public class ScoreSystem : MonoBehaviour
 
     public void onInput(EventAction input)
     {
-
         var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
 
-        if (closestEvent.input == input)
-        {
+        if (closestEvent.input == input) {
             NoteHit();
-        }
-        else {
+        } else {
             NoteMissed();
         }
-
-
-
     }
 }
