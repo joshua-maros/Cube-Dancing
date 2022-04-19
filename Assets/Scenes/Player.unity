@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cc: {fileID: 940575270}
+  scoreSystem: {fileID: 1217257567}
 --- !u!114 &940575270 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2623855525752144887, guid: ffd19f80b7b45fec9885dd2e25241549, type: 3}
@@ -797,6 +798,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiTracker: 0
   multiplierThresholds: 
+  nextEvent:
+    tick: -1
+    input: 1
+    player: 0
   scoreText: {fileID: 393767126}
   multiText: {fileID: 1264421050}
 --- !u!4 &1217257568

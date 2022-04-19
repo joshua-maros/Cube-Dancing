@@ -23,9 +23,6 @@ public class ScoreSystem : MonoBehaviour
     //nearest event
     private float nearestTick;
     private float currentTick;
-    
-    private int currentEventTick;
-  
 
     //CANVAS
     public Text scoreText;
@@ -37,19 +34,11 @@ public class ScoreSystem : MonoBehaviour
 
 
     
-    //@ START
-    void Start()
-    {
-        //EXTERNAL SCRIPT CALLS
+    void Start() {
         currentTick = SongClock.instance.GetCurrentTick();
-
 
         scoreText.text = "0";
         multiText.text = "X" + "0";
-
-
-       
-        
     }
 
     // Update is called once per frame
@@ -59,16 +48,25 @@ public class ScoreSystem : MonoBehaviour
         scoreText.gameObject.transform.localScale = new Vector3(1, 1, 1) * (0.3f * this.scorePulse + 1.0f);
         this.scorePulse = Mathf.Max(this.scorePulse - Time.deltaTime * 8.0f, 0.0f);
         multiText.text = "X" + currentMultiplier.ToString();
-        Debug.Log(currentTick);
     }
     
 
 
     public void NoteHit()
     {
-        scorePulse = 1.0f;
+        var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
+        var time = Mathf.Abs(closestEvent.tick - SongClock.instance.GetCurrentTick());
+        if (time < 1.0f) {
+            currentScore += 10;
+            scorePulse = 3.0f;
+        } else if (time < 3.0f) {
+            currentScore += 3;
+            scorePulse = 1.0f;
+        } else {
+            currentScore += 1;
+            scorePulse = 0.3f;
+        }
         Debug.Log("HIT ON TIME");
-        currentScore += point;
         scoreText.text = currentScore.ToString();
 
     }
@@ -78,19 +76,5 @@ public class ScoreSystem : MonoBehaviour
         Debug.Log("MISSED BEAT");
         scoreText.text = currentScore.ToString();
         Effects.instance.Error();
-    }
-
-
-  
-
-    public void onInput(EventAction input)
-    {
-        var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
-
-        if (closestEvent.input == input) {
-            NoteHit();
-        } else {
-            NoteMissed();
-        }
     }
 }

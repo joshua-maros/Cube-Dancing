@@ -23,6 +23,8 @@ public class Chart : ScriptableObject
        
         foreach(Event eventt in events )
         {
+            if (eventt.player != Player.A) continue;
+
             var  temp = tick - closest.tick;
             temp = Mathf.Abs(temp);
 
@@ -38,6 +40,28 @@ public class Chart : ScriptableObject
 
         return closest;
 
+    }
+
+    public Event NextEventAfterTick(float tick)
+    {
+        Event closest = events[0];
+       
+        foreach(Event eventt in events )
+        {
+            if (eventt.player != Player.A) continue;
+
+            var previousDelta = closest.tick - tick;
+            var currentDelta = eventt.tick - tick;
+
+            if (
+                (currentDelta < previousDelta || previousDelta <= 0)
+                && currentDelta > 0.1f
+            ) {
+                closest = eventt;
+            }
+        }
+
+        return closest;
     }
 
     public List<Event> GetEventsInRange(float startTick, float endTick) {
@@ -108,6 +132,7 @@ public enum EventAction
     Down,
     Left,
     Right,
+    Nothing
 }
 
 public static class InputExtensions
@@ -125,9 +150,12 @@ public static class InputExtensions
 
             case EventAction.Left:
                 return EventAction.Right;
-
-            default: // Right
+                
+            case EventAction.Right:
                 return EventAction.Left;
+
+            default: // Nothing
+                return EventAction.Nothing;
         }
     }
 }
