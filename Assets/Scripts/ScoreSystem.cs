@@ -52,15 +52,14 @@ public class ScoreSystem : MonoBehaviour
     
 
 
-    public void NoteHit()
+    public void NoteHit(float tick)
     {
-        var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
-        var time = Mathf.Abs(closestEvent.tick - SongClock.instance.GetCurrentTick());
+        var time = Mathf.Abs(tick - SongClock.instance.GetCurrentTick());
         var multiplier = 1.0f;
         multiplier *= Mathf.Pow(2.0f, SongClock.instance.songChart.difficultyOutOfTen / 2.0f);
-        if (time < 1.0f) {
+        if (time < 1.6f) {
             currentScore += (int) (10 * multiplier);
-            scorePulse = 3.0f;
+            scorePulse = 4.0f;
         } else if (time < 3.0f) {
             currentScore += (int) (3 * multiplier);
             scorePulse = 1.0f;
@@ -68,14 +67,12 @@ public class ScoreSystem : MonoBehaviour
             currentScore += (int) (1 * multiplier);
             scorePulse = 0.3f;
         }
-        Debug.Log("HIT ON TIME");
         scoreText.text = currentScore.ToString();
 
     }
 
     public void NoteMissed()
     {
-        Debug.Log("MISSED BEAT");
         scoreText.text = currentScore.ToString();
         Effects.instance.Error();
     }

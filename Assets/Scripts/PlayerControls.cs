@@ -7,12 +7,14 @@ public class PlayerControls : MonoBehaviour
     public CubeController cc;
     public ScoreSystem scoreSystem;
     public Event nextEvent = new Event(-1, EventAction.Down, Player.A);
+    public Event previousEvent = new Event(-2, EventAction.Down, Player.A);
 
     void Start() {
         AdvanceNextEvent();
     }
 
     void AdvanceNextEvent() {
+        previousEvent = nextEvent;
         var eventt = SongClock.instance.songChart.NextEventAfterTick(nextEvent.tick);
         Debug.Log(eventt.input);
         nextEvent = eventt;
@@ -20,6 +22,7 @@ public class PlayerControls : MonoBehaviour
 
     void Update(){
         if (SongClock.instance.GetCurrentTick() < 0) return;
+        if (nextEvent.tick == -1) return;
         if(Input.GetButtonDown("P1Left")){
             DoInput(EventAction.Left);
         }
@@ -53,16 +56,14 @@ public class PlayerControls : MonoBehaviour
     }
 
     void DoInput(EventAction action) {
-        var closestEvent = SongClock.instance.songChart.getter(SongClock.instance.GetCurrentTick());
-
-        if (closestEvent.tick == nextEvent.tick) {
-            if (closestEvent.input == action) {
-                scoreSystem.NoteHit();
-            } else {
+        if (nextEvent.input == action) {
+            if (SongClock.instance.GetCurrentTick() <= previousEvent.tick) {
                 scoreSystem.NoteMissed();
+            } else {
+                scoreSystem.NoteHit(nextEvent.tick);
+                cc.Step(nextEvent.input);
+                AdvanceNextEvent();
             }
-            AdvanceNextEvent();
-            cc.Step(closestEvent.input);
         } else {
             scoreSystem.NoteMissed();
         }

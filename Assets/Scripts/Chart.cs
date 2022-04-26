@@ -17,6 +17,10 @@ public class Chart : ScriptableObject
     public Segment[] segments;
     public List<Event> events = new List<Event>();
 
+    public float TicksPerSecond() {
+        return SongClock.TICKS_PER_MEASURE * segments[0].numMeasures / (segments[0].endTime - segments[0].startTime);
+    }
+
     public Event getter(float tick)
     {
         Event closest = events[0];
@@ -45,7 +49,7 @@ public class Chart : ScriptableObject
 
     public Event NextEventAfterTick(float tick)
     {
-        Event closest = events[0];
+        Event closest = new Event(-1, EventAction.Nothing, Player.A);
        
         foreach(Event eventt in events )
         {
