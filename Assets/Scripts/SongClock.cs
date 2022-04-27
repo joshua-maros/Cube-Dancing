@@ -71,7 +71,16 @@ public class SongClock : MonoBehaviour
             }
         }
         if (songStarted) {
-            return (songTime - songChart.segments[0].startTime) * songChart.TicksPerSecond();
+            if (songTime <= songChart.segments[0].startTime) {
+                return (songTime - songChart.segments[0].startTime) * songChart.TicksPerSecond();
+            } else {
+                var previousTicks = 0.0f;
+                foreach (var segment in songChart.segments) {
+                    previousTicks += segment.numMeasures * TICKS_PER_MEASURE;
+                }
+                var last = songChart.segments.Length - 1;
+                return previousTicks + (songTime - songChart.segments[last].endTime) * songChart.TicksPerSecond();
+            }
         } else {
             return -ticksUntilSongStart;
         }

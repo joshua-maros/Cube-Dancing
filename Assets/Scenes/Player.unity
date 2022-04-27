@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 503888497}
-  songChart: {fileID: 11400000, guid: d136648cf9e0f36dc860d3ac310c3171, type: 2}
+  songChart: {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
   countdownText: {fileID: 897038161}
 --- !u!1 &705507993
 GameObject:
@@ -686,6 +686,10 @@ MonoBehaviour:
   scoreSystem: {fileID: 1217257567}
   nextEvent:
     tick: -1
+    input: 1
+    player: 0
+  previousEvent:
+    tick: -2
     input: 1
     player: 0
 --- !u!114 &940575270 stripped

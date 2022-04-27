@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: What You Know
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 9f07696de8d8881d0ba32e31f5994ac7, type: 3}
+  difficultyOutOfTen: 6
   segments:
   - startTime: 0.377
     endTime: 14.215

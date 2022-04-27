@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FeelTheSameChart
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: be68dec9406365fe79686029c784b98d, type: 3}
+  difficultyOutOfTen: 8
   segments:
   - startTime: 2.338
     endTime: 6.913
@@ -81,11 +82,11 @@ MonoBehaviour:
   - tick: 336
     input: 2
     player: 0
-  - tick: 360
-    input: 1
-    player: 0
   - tick: 348
     input: 2
+    player: 0
+  - tick: 360
+    input: 1
     player: 0
   - tick: 384
     input: 2
@@ -303,6 +304,9 @@ MonoBehaviour:
   - tick: 1368
     input: 0
     player: 0
+  - tick: 1380
+    input: 3
+    player: 0
   - tick: 1386
     input: 0
     player: 0
@@ -372,8 +376,8 @@ MonoBehaviour:
   - tick: 1770
     input: 2
     player: 0
-  - tick: 1380
-    input: 3
+  - tick: 1782
+    input: 0
     player: 0
   - tick: 1848
     input: 1
@@ -414,11 +418,11 @@ MonoBehaviour:
   - tick: 2112
     input: 0
     player: 0
-  - tick: 2124
-    input: 0
-    player: 0
   - tick: 2118
     input: 2
+    player: 0
+  - tick: 2124
+    input: 0
     player: 0
   - tick: 2130
     input: 2
@@ -582,6 +586,9 @@ MonoBehaviour:
   - tick: 2718
     input: 1
     player: 0
+  - tick: 2730
+    input: 3
+    player: 0
   - tick: 2748
     input: 3
     player: 0
@@ -606,13 +613,10 @@ MonoBehaviour:
   - tick: 2868
     input: 1
     player: 0
-  - tick: 2730
+  - tick: 2880
     input: 3
     player: 0
-  - tick: 1782
-    input: 0
-    player: 0
-  - tick: 2880
+  - tick: 2904
     input: 3
     player: 0
   - tick: 2916
@@ -623,9 +627,6 @@ MonoBehaviour:
     player: 0
   - tick: 2952
     input: 0
-    player: 0
-  - tick: 2904
-    input: 3
     player: 0
   - tick: 2964
     input: 0
@@ -666,11 +667,11 @@ MonoBehaviour:
   - tick: 3264
     input: 0
     player: 0
-  - tick: 3300
-    input: 0
-    player: 0
   - tick: 3288
     input: 3
+    player: 0
+  - tick: 3300
+    input: 0
     player: 0
   - tick: 3324
     input: 3
@@ -711,6 +712,9 @@ MonoBehaviour:
   - tick: 3588
     input: 3
     player: 0
+  - tick: 3636
+    input: 1
+    player: 0
   - tick: 3660
     input: 3
     player: 0
@@ -723,13 +727,13 @@ MonoBehaviour:
   - tick: 3690
     input: 0
     player: 0
+  - tick: 3714
+    input: 1
+    player: 0
   - tick: 3720
     input: 1
     player: 0
   - tick: 3732
-    input: 1
-    player: 0
-  - tick: 3714
     input: 1
     player: 0
   - tick: 3756
@@ -765,9 +769,6 @@ MonoBehaviour:
   - tick: 3882
     input: 3
     player: 0
-  - tick: 3636
-    input: 1
-    player: 0
   - tick: 3900
     input: 1
     player: 0
@@ -786,6 +787,12 @@ MonoBehaviour:
   - tick: 3984
     input: 2
     player: 0
+  - tick: 4008
+    input: 2
+    player: 0
+  - tick: 4020
+    input: 1
+    player: 0
   - tick: 4044
     input: 3
     player: 0
@@ -797,12 +804,6 @@ MonoBehaviour:
     player: 0
   - tick: 4074
     input: 0
-    player: 0
-  - tick: 4020
-    input: 1
-    player: 0
-  - tick: 4008
-    input: 2
     player: 0
   - tick: 4092
     input: 2
@@ -960,10 +961,10 @@ MonoBehaviour:
   - tick: 4590
     input: 1
     player: 0
-  - tick: 4602
+  - tick: 4596
     input: 1
     player: 0
-  - tick: 4596
+  - tick: 4602
     input: 1
     player: 0
   - tick: 4608
@@ -1008,10 +1009,10 @@ MonoBehaviour:
   - tick: 4686
     input: 3
     player: 0
-  - tick: 4698
+  - tick: 4692
     input: 3
     player: 0
-  - tick: 4692
+  - tick: 4698
     input: 3
     player: 0
   - tick: 4704
@@ -1053,10 +1054,10 @@ MonoBehaviour:
   - tick: 4776
     input: 1
     player: 0
-  - tick: 4788
+  - tick: 4782
     input: 1
     player: 0
-  - tick: 4782
+  - tick: 4788
     input: 1
     player: 0
   - tick: 4800
@@ -1170,10 +1171,10 @@ MonoBehaviour:
   - tick: 5016
     input: 3
     player: 0
-  - tick: 5028
+  - tick: 5022
     input: 3
     player: 0
-  - tick: 5022
+  - tick: 5028
     input: 3
     player: 0
   - tick: 5034
@@ -1221,10 +1222,10 @@ MonoBehaviour:
   - tick: 5118
     input: 1
     player: 0
-  - tick: 5130
+  - tick: 5124
     input: 1
     player: 0
-  - tick: 5124
+  - tick: 5130
     input: 1
     player: 0
   - tick: 5136
@@ -1254,11 +1255,11 @@ MonoBehaviour:
   - tick: 5184
     input: 2
     player: 0
-  - tick: 5226
-    input: 3
-    player: 0
   - tick: 5220
     input: 0
+    player: 0
+  - tick: 5226
+    input: 3
     player: 0
   - tick: 5232
     input: 1
@@ -1299,11 +1300,11 @@ MonoBehaviour:
   - tick: 5424
     input: 1
     player: 0
-  - tick: 5466
-    input: 2
-    player: 0
   - tick: 5460
     input: 1
+    player: 0
+  - tick: 5466
+    input: 2
     player: 0
   - tick: 5472
     input: 0
@@ -1398,10 +1399,10 @@ MonoBehaviour:
   - tick: 5976
     input: 1
     player: 0
-  - tick: 5994
+  - tick: 5988
     input: 0
     player: 0
-  - tick: 5988
+  - tick: 5994
     input: 0
     player: 0
   - tick: 6000
@@ -1788,11 +1789,11 @@ MonoBehaviour:
   - tick: 7488
     input: 0
     player: 0
-  - tick: 7500
-    input: 0
-    player: 0
   - tick: 7494
     input: 2
+    player: 0
+  - tick: 7500
+    input: 0
     player: 0
   - tick: 7506
     input: 2
@@ -1863,11 +1864,11 @@ MonoBehaviour:
   - tick: 7728
     input: 1
     player: 0
-  - tick: 7740
-    input: 1
-    player: 0
   - tick: 7734
     input: 3
+    player: 0
+  - tick: 7740
+    input: 1
     player: 0
   - tick: 7746
     input: 3
@@ -2121,10 +2122,10 @@ MonoBehaviour:
   - tick: 8448
     input: 2
     player: 0
-  - tick: 8460
+  - tick: 8454
     input: 2
     player: 0
-  - tick: 8454
+  - tick: 8460
     input: 2
     player: 0
   - tick: 8466
@@ -2205,11 +2206,11 @@ MonoBehaviour:
   - tick: 8616
     input: 2
     player: 0
-  - tick: 8628
-    input: 1
-    player: 0
   - tick: 8622
     input: 2
+    player: 0
+  - tick: 8628
+    input: 1
     player: 0
   - tick: 8640
     input: 2
@@ -2325,10 +2326,10 @@ MonoBehaviour:
   - tick: 8862
     input: 3
     player: 0
-  - tick: 8874
+  - tick: 8868
     input: 0
     player: 0
-  - tick: 8868
+  - tick: 8874
     input: 0
     player: 0
   - tick: 8880

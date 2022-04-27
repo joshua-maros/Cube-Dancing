@@ -1,0 +1,1488 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
+  m_Name: Black Milk
+  m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: bce426765a227798e81fb8f7a4cca163, type: 3}
+  difficultyOutOfTen: 2
+  segments:
+  - startTime: 9.906
+    endTime: 101.261
+    numMeasures: 32
+  - startTime: 101.261
+    endTime: 198.389
+    numMeasures: 34
+  - startTime: 198.389
+    endTime: 295.508
+    numMeasures: 34
+  - startTime: 295.508
+    endTime: 346.918
+    numMeasures: 18
+  events:
+  - tick: 0
+    input: 1
+    player: 0
+  - tick: 24
+    input: 3
+    player: 0
+  - tick: 36
+    input: 3
+    player: 0
+  - tick: 48
+    input: 0
+    player: 0
+  - tick: 72
+    input: 3
+    player: 0
+  - tick: 108
+    input: 1
+    player: 0
+  - tick: 120
+    input: 2
+    player: 0
+  - tick: 132
+    input: 2
+    player: 0
+  - tick: 144
+    input: 0
+    player: 0
+  - tick: 168
+    input: 2
+    player: 0
+  - tick: 192
+    input: 1
+    player: 0
+  - tick: 216
+    input: 3
+    player: 0
+  - tick: 228
+    input: 3
+    player: 0
+  - tick: 240
+    input: 0
+    player: 0
+  - tick: 264
+    input: 3
+    player: 0
+  - tick: 300
+    input: 1
+    player: 0
+  - tick: 312
+    input: 2
+    player: 0
+  - tick: 324
+    input: 2
+    player: 0
+  - tick: 336
+    input: 0
+    player: 0
+  - tick: 360
+    input: 2
+    player: 0
+  - tick: 384
+    input: 2
+    player: 0
+  - tick: 396
+    input: 3
+    player: 0
+  - tick: 408
+    input: 2
+    player: 0
+  - tick: 420
+    input: 0
+    player: 0
+  - tick: 444
+    input: 0
+    player: 0
+  - tick: 456
+    input: 2
+    player: 0
+  - tick: 468
+    input: 3
+    player: 0
+  - tick: 480
+    input: 2
+    player: 0
+  - tick: 492
+    input: 3
+    player: 0
+  - tick: 516
+    input: 3
+    player: 0
+  - tick: 528
+    input: 1
+    player: 0
+  - tick: 540
+    input: 1
+    player: 0
+  - tick: 552
+    input: 1
+    player: 0
+  - tick: 576
+    input: 2
+    player: 0
+  - tick: 588
+    input: 3
+    player: 0
+  - tick: 600
+    input: 2
+    player: 0
+  - tick: 612
+    input: 0
+    player: 0
+  - tick: 636
+    input: 0
+    player: 0
+  - tick: 648
+    input: 2
+    player: 0
+  - tick: 660
+    input: 3
+    player: 0
+  - tick: 672
+    input: 2
+    player: 0
+  - tick: 684
+    input: 3
+    player: 0
+  - tick: 708
+    input: 3
+    player: 0
+  - tick: 720
+    input: 1
+    player: 0
+  - tick: 732
+    input: 1
+    player: 0
+  - tick: 744
+    input: 1
+    player: 0
+  - tick: 768
+    input: 0
+    player: 0
+  - tick: 804
+    input: 3
+    player: 0
+  - tick: 936
+    input: 1
+    player: 0
+  - tick: 960
+    input: 0
+    player: 0
+  - tick: 978
+    input: 2
+    player: 0
+  - tick: 984
+    input: 2
+    player: 0
+  - tick: 996
+    input: 2
+    player: 0
+  - tick: 1152
+    input: 0
+    player: 0
+  - tick: 1197
+    input: 3
+    player: 0
+  - tick: 1320
+    input: 3
+    player: 0
+  - tick: 1344
+    input: 0
+    player: 0
+  - tick: 1362
+    input: 3
+    player: 0
+  - tick: 1368
+    input: 3
+    player: 0
+  - tick: 1374
+    input: 3
+    player: 0
+  - tick: 1380
+    input: 3
+    player: 0
+  - tick: 1536
+    input: 2
+    player: 0
+  - tick: 1572
+    input: 0
+    player: 0
+  - tick: 1704
+    input: 2
+    player: 0
+  - tick: 1728
+    input: 2
+    player: 0
+  - tick: 1734
+    input: 2
+    player: 0
+  - tick: 1740
+    input: 2
+    player: 0
+  - tick: 1746
+    input: 2
+    player: 0
+  - tick: 1752
+    input: 2
+    player: 0
+  - tick: 1764
+    input: 1
+    player: 0
+  - tick: 1920
+    input: 3
+    player: 0
+  - tick: 1956
+    input: 0
+    player: 0
+  - tick: 2088
+    input: 2
+    player: 0
+  - tick: 2100
+    input: 2
+    player: 0
+  - tick: 2112
+    input: 3
+    player: 0
+  - tick: 2118
+    input: 3
+    player: 0
+  - tick: 2124
+    input: 3
+    player: 0
+  - tick: 2130
+    input: 3
+    player: 0
+  - tick: 2136
+    input: 3
+    player: 0
+  - tick: 2148
+    input: 3
+    player: 0
+  - tick: 2196
+    input: 2
+    player: 0
+  - tick: 2208
+    input: 0
+    player: 0
+  - tick: 2220
+    input: 1
+    player: 0
+  - tick: 2244
+    input: 2
+    player: 0
+  - tick: 2256
+    input: 0
+    player: 0
+  - tick: 2280
+    input: 3
+    player: 0
+  - tick: 2304
+    input: 2
+    player: 0
+  - tick: 2316
+    input: 1
+    player: 0
+  - tick: 2340
+    input: 2
+    player: 0
+  - tick: 2352
+    input: 0
+    player: 0
+  - tick: 2364
+    input: 1
+    player: 0
+  - tick: 2388
+    input: 2
+    player: 0
+  - tick: 2400
+    input: 0
+    player: 0
+  - tick: 2412
+    input: 1
+    player: 0
+  - tick: 2436
+    input: 2
+    player: 0
+  - tick: 2448
+    input: 0
+    player: 0
+  - tick: 2460
+    input: 1
+    player: 0
+  - tick: 2484
+    input: 3
+    player: 0
+  - tick: 2496
+    input: 0
+    player: 0
+  - tick: 2508
+    input: 1
+    player: 0
+  - tick: 2532
+    input: 3
+    player: 0
+  - tick: 2544
+    input: 0
+    player: 0
+  - tick: 2556
+    input: 1
+    player: 0
+  - tick: 2580
+    input: 3
+    player: 0
+  - tick: 2592
+    input: 0
+    player: 0
+  - tick: 2604
+    input: 1
+    player: 0
+  - tick: 2628
+    input: 3
+    player: 0
+  - tick: 2640
+    input: 0
+    player: 0
+  - tick: 2652
+    input: 1
+    player: 0
+  - tick: 2676
+    input: 2
+    player: 0
+  - tick: 2688
+    input: 0
+    player: 0
+  - tick: 2700
+    input: 1
+    player: 0
+  - tick: 2724
+    input: 2
+    player: 0
+  - tick: 2736
+    input: 0
+    player: 0
+  - tick: 2748
+    input: 1
+    player: 0
+  - tick: 2772
+    input: 2
+    player: 0
+  - tick: 2784
+    input: 0
+    player: 0
+  - tick: 2796
+    input: 1
+    player: 0
+  - tick: 2820
+    input: 2
+    player: 0
+  - tick: 2832
+    input: 0
+    player: 0
+  - tick: 2844
+    input: 1
+    player: 0
+  - tick: 2868
+    input: 3
+    player: 0
+  - tick: 2880
+    input: 0
+    player: 0
+  - tick: 2892
+    input: 1
+    player: 0
+  - tick: 2916
+    input: 3
+    player: 0
+  - tick: 2928
+    input: 0
+    player: 0
+  - tick: 2940
+    input: 1
+    player: 0
+  - tick: 2964
+    input: 3
+    player: 0
+  - tick: 2976
+    input: 0
+    player: 0
+  - tick: 2988
+    input: 1
+    player: 0
+  - tick: 3012
+    input: 3
+    player: 0
+  - tick: 3024
+    input: 0
+    player: 0
+  - tick: 3036
+    input: 1
+    player: 0
+  - tick: 3072
+    input: 0
+    player: 0
+  - tick: 3111
+    input: 2
+    player: 0
+  - tick: 3240
+    input: 2
+    player: 0
+  - tick: 3252
+    input: 2
+    player: 0
+  - tick: 3264
+    input: 1
+    player: 0
+  - tick: 3282
+    input: 1
+    player: 0
+  - tick: 3288
+    input: 1
+    player: 0
+  - tick: 3294
+    input: 1
+    player: 0
+  - tick: 3300
+    input: 1
+    player: 0
+  - tick: 3456
+    input: 0
+    player: 0
+  - tick: 3492
+    input: 3
+    player: 0
+  - tick: 3624
+    input: 1
+    player: 0
+  - tick: 3648
+    input: 0
+    player: 0
+  - tick: 3666
+    input: 3
+    player: 0
+  - tick: 3672
+    input: 3
+    player: 0
+  - tick: 3678
+    input: 3
+    player: 0
+  - tick: 3684
+    input: 3
+    player: 0
+  - tick: 3840
+    input: 2
+    player: 0
+  - tick: 3876
+    input: 0
+    player: 0
+  - tick: 4008
+    input: 2
+    player: 0
+  - tick: 4032
+    input: 2
+    player: 0
+  - tick: 4038
+    input: 2
+    player: 0
+  - tick: 4044
+    input: 2
+    player: 0
+  - tick: 4050
+    input: 2
+    player: 0
+  - tick: 4056
+    input: 2
+    player: 0
+  - tick: 4068
+    input: 1
+    player: 0
+  - tick: 4200
+    input: 3
+    player: 0
+  - tick: 4224
+    input: 3
+    player: 0
+  - tick: 4260
+    input: 0
+    player: 0
+  - tick: 4392
+    input: 3
+    player: 0
+  - tick: 4404
+    input: 3
+    player: 0
+  - tick: 4416
+    input: 3
+    player: 0
+  - tick: 4422
+    input: 1
+    player: 0
+  - tick: 4428
+    input: 1
+    player: 0
+  - tick: 4434
+    input: 1
+    player: 0
+  - tick: 4440
+    input: 1
+    player: 0
+  - tick: 4452
+    input: 2
+    player: 0
+  - tick: 4608
+    input: 0
+    player: 0
+  - tick: 4644
+    input: 3
+    player: 0
+  - tick: 4800
+    input: 0
+    player: 0
+  - tick: 4818
+    input: 2
+    player: 0
+  - tick: 4824
+    input: 2
+    player: 0
+  - tick: 4830
+    input: 2
+    player: 0
+  - tick: 4839
+    input: 2
+    player: 0
+  - tick: 4992
+    input: 0
+    player: 0
+  - tick: 5040
+    input: 3
+    player: 0
+  - tick: 5160
+    input: 1
+    player: 0
+  - tick: 5184
+    input: 0
+    player: 0
+  - tick: 5202
+    input: 3
+    player: 0
+  - tick: 5208
+    input: 3
+    player: 0
+  - tick: 5214
+    input: 3
+    player: 0
+  - tick: 5220
+    input: 3
+    player: 0
+  - tick: 5376
+    input: 1
+    player: 0
+  - tick: 5400
+    input: 2
+    player: 0
+  - tick: 5412
+    input: 2
+    player: 0
+  - tick: 5424
+    input: 0
+    player: 0
+  - tick: 5448
+    input: 2
+    player: 0
+  - tick: 5484
+    input: 1
+    player: 0
+  - tick: 5496
+    input: 3
+    player: 0
+  - tick: 5508
+    input: 3
+    player: 0
+  - tick: 5520
+    input: 0
+    player: 0
+  - tick: 5544
+    input: 3
+    player: 0
+  - tick: 5568
+    input: 1
+    player: 0
+  - tick: 5592
+    input: 2
+    player: 0
+  - tick: 5604
+    input: 2
+    player: 0
+  - tick: 5616
+    input: 0
+    player: 0
+  - tick: 5640
+    input: 2
+    player: 0
+  - tick: 5676
+    input: 1
+    player: 0
+  - tick: 5688
+    input: 3
+    player: 0
+  - tick: 5700
+    input: 3
+    player: 0
+  - tick: 5712
+    input: 0
+    player: 0
+  - tick: 5736
+    input: 3
+    player: 0
+  - tick: 5760
+    input: 2
+    player: 0
+  - tick: 5772
+    input: 2
+    player: 0
+  - tick: 5784
+    input: 0
+    player: 0
+  - tick: 5808
+    input: 2
+    player: 0
+  - tick: 5820
+    input: 2
+    player: 0
+  - tick: 5832
+    input: 0
+    player: 0
+  - tick: 5856
+    input: 3
+    player: 0
+  - tick: 5868
+    input: 3
+    player: 0
+  - tick: 5880
+    input: 1
+    player: 0
+  - tick: 5904
+    input: 3
+    player: 0
+  - tick: 5916
+    input: 3
+    player: 0
+  - tick: 5928
+    input: 1
+    player: 0
+  - tick: 5952
+    input: 2
+    player: 0
+  - tick: 5964
+    input: 2
+    player: 0
+  - tick: 5976
+    input: 0
+    player: 0
+  - tick: 6000
+    input: 2
+    player: 0
+  - tick: 6012
+    input: 2
+    player: 0
+  - tick: 6024
+    input: 0
+    player: 0
+  - tick: 6048
+    input: 3
+    player: 0
+  - tick: 6060
+    input: 3
+    player: 0
+  - tick: 6072
+    input: 1
+    player: 0
+  - tick: 6096
+    input: 3
+    player: 0
+  - tick: 6108
+    input: 3
+    player: 0
+  - tick: 6120
+    input: 1
+    player: 0
+  - tick: 6144
+    input: 2
+    player: 0
+  - tick: 6156
+    input: 2
+    player: 0
+  - tick: 6168
+    input: 0
+    player: 0
+  - tick: 6192
+    input: 2
+    player: 0
+  - tick: 6204
+    input: 2
+    player: 0
+  - tick: 6216
+    input: 0
+    player: 0
+  - tick: 6240
+    input: 3
+    player: 0
+  - tick: 6252
+    input: 3
+    player: 0
+  - tick: 6264
+    input: 1
+    player: 0
+  - tick: 6288
+    input: 3
+    player: 0
+  - tick: 6300
+    input: 3
+    player: 0
+  - tick: 6312
+    input: 1
+    player: 0
+  - tick: 6336
+    input: 0
+    player: 0
+  - tick: 6348
+    input: 1
+    player: 0
+  - tick: 6372
+    input: 2
+    player: 0
+  - tick: 6384
+    input: 0
+    player: 0
+  - tick: 6396
+    input: 1
+    player: 0
+  - tick: 6420
+    input: 2
+    player: 0
+  - tick: 6432
+    input: 0
+    player: 0
+  - tick: 6444
+    input: 1
+    player: 0
+  - tick: 6468
+    input: 2
+    player: 0
+  - tick: 6480
+    input: 0
+    player: 0
+  - tick: 6492
+    input: 1
+    player: 0
+  - tick: 6516
+    input: 3
+    player: 0
+  - tick: 6528
+    input: 0
+    player: 0
+  - tick: 6540
+    input: 1
+    player: 0
+  - tick: 6564
+    input: 3
+    player: 0
+  - tick: 6576
+    input: 0
+    player: 0
+  - tick: 6588
+    input: 1
+    player: 0
+  - tick: 6612
+    input: 3
+    player: 0
+  - tick: 6624
+    input: 0
+    player: 0
+  - tick: 6636
+    input: 1
+    player: 0
+  - tick: 6660
+    input: 3
+    player: 0
+  - tick: 6672
+    input: 0
+    player: 0
+  - tick: 6684
+    input: 1
+    player: 0
+  - tick: 6708
+    input: 2
+    player: 0
+  - tick: 6720
+    input: 0
+    player: 0
+  - tick: 6732
+    input: 1
+    player: 0
+  - tick: 6756
+    input: 2
+    player: 0
+  - tick: 6768
+    input: 0
+    player: 0
+  - tick: 6780
+    input: 1
+    player: 0
+  - tick: 6804
+    input: 2
+    player: 0
+  - tick: 6816
+    input: 0
+    player: 0
+  - tick: 6828
+    input: 1
+    player: 0
+  - tick: 6852
+    input: 2
+    player: 0
+  - tick: 6864
+    input: 0
+    player: 0
+  - tick: 6888
+    input: 3
+    player: 0
+  - tick: 6912
+    input: 0
+    player: 0
+  - tick: 6948
+    input: 3
+    player: 0
+  - tick: 7104
+    input: 2
+    player: 0
+  - tick: 7122
+    input: 2
+    player: 0
+  - tick: 7128
+    input: 2
+    player: 0
+  - tick: 7134
+    input: 2
+    player: 0
+  - tick: 7146
+    input: 2
+    player: 0
+  - tick: 7296
+    input: 0
+    player: 0
+  - tick: 7332
+    input: 3
+    player: 0
+  - tick: 7488
+    input: 3
+    player: 0
+  - tick: 7506
+    input: 3
+    player: 0
+  - tick: 7512
+    input: 3
+    player: 0
+  - tick: 7518
+    input: 3
+    player: 0
+  - tick: 7530
+    input: 3
+    player: 0
+  - tick: 7680
+    input: 2
+    player: 0
+  - tick: 7716
+    input: 0
+    player: 0
+  - tick: 7848
+    input: 2
+    player: 0
+  - tick: 7872
+    input: 1
+    player: 0
+  - tick: 7878
+    input: 1
+    player: 0
+  - tick: 7884
+    input: 1
+    player: 0
+  - tick: 7890
+    input: 1
+    player: 0
+  - tick: 7896
+    input: 1
+    player: 0
+  - tick: 7908
+    input: 1
+    player: 0
+  - tick: 8046
+    input: 3
+    player: 0
+  - tick: 8064
+    input: 3
+    player: 0
+  - tick: 8100
+    input: 0
+    player: 0
+  - tick: 8232
+    input: 3
+    player: 0
+  - tick: 8244
+    input: 3
+    player: 0
+  - tick: 8256
+    input: 2
+    player: 0
+  - tick: 8262
+    input: 2
+    player: 0
+  - tick: 8268
+    input: 2
+    player: 0
+  - tick: 8274
+    input: 2
+    player: 0
+  - tick: 8280
+    input: 2
+    player: 0
+  - tick: 8292
+    input: 2
+    player: 0
+  - tick: 8448
+    input: 3
+    player: 0
+  - tick: 8484
+    input: 1
+    player: 0
+  - tick: 8616
+    input: 3
+    player: 0
+  - tick: 8628
+    input: 3
+    player: 0
+  - tick: 8640
+    input: 0
+    player: 0
+  - tick: 8658
+    input: 0
+    player: 0
+  - tick: 8664
+    input: 0
+    player: 0
+  - tick: 8670
+    input: 0
+    player: 0
+  - tick: 8682
+    input: 0
+    player: 0
+  - tick: 8832
+    input: 2
+    player: 0
+  - tick: 8868
+    input: 1
+    player: 0
+  - tick: 9024
+    input: 3
+    player: 0
+  - tick: 9042
+    input: 1
+    player: 0
+  - tick: 9048
+    input: 1
+    player: 0
+  - tick: 9054
+    input: 1
+    player: 0
+  - tick: 9066
+    input: 3
+    player: 0
+  - tick: 9216
+    input: 0
+    player: 0
+  - tick: 9228
+    input: 1
+    player: 0
+  - tick: 9252
+    input: 2
+    player: 0
+  - tick: 9264
+    input: 0
+    player: 0
+  - tick: 9276
+    input: 1
+    player: 0
+  - tick: 9300
+    input: 2
+    player: 0
+  - tick: 9312
+    input: 0
+    player: 0
+  - tick: 9324
+    input: 1
+    player: 0
+  - tick: 9348
+    input: 2
+    player: 0
+  - tick: 9360
+    input: 0
+    player: 0
+  - tick: 9372
+    input: 1
+    player: 0
+  - tick: 9396
+    input: 3
+    player: 0
+  - tick: 9408
+    input: 0
+    player: 0
+  - tick: 9420
+    input: 1
+    player: 0
+  - tick: 9444
+    input: 3
+    player: 0
+  - tick: 9456
+    input: 0
+    player: 0
+  - tick: 9468
+    input: 1
+    player: 0
+  - tick: 9492
+    input: 3
+    player: 0
+  - tick: 9504
+    input: 0
+    player: 0
+  - tick: 9516
+    input: 1
+    player: 0
+  - tick: 9540
+    input: 3
+    player: 0
+  - tick: 9552
+    input: 0
+    player: 0
+  - tick: 9564
+    input: 1
+    player: 0
+  - tick: 9600
+    input: 2
+    player: 0
+  - tick: 9612
+    input: 2
+    player: 0
+  - tick: 9624
+    input: 0
+    player: 0
+  - tick: 9648
+    input: 2
+    player: 0
+  - tick: 9660
+    input: 2
+    player: 0
+  - tick: 9672
+    input: 0
+    player: 0
+  - tick: 9696
+    input: 3
+    player: 0
+  - tick: 9708
+    input: 3
+    player: 0
+  - tick: 9720
+    input: 1
+    player: 0
+  - tick: 9744
+    input: 3
+    player: 0
+  - tick: 9756
+    input: 3
+    player: 0
+  - tick: 9768
+    input: 1
+    player: 0
+  - tick: 9792
+    input: 2
+    player: 0
+  - tick: 9804
+    input: 2
+    player: 0
+  - tick: 9816
+    input: 0
+    player: 0
+  - tick: 9840
+    input: 2
+    player: 0
+  - tick: 9852
+    input: 2
+    player: 0
+  - tick: 9864
+    input: 0
+    player: 0
+  - tick: 9888
+    input: 3
+    player: 0
+  - tick: 9900
+    input: 3
+    player: 0
+  - tick: 9912
+    input: 1
+    player: 0
+  - tick: 9936
+    input: 3
+    player: 0
+  - tick: 9948
+    input: 3
+    player: 0
+  - tick: 9960
+    input: 1
+    player: 0
+  - tick: 10032
+    input: 0
+    player: 0
+  - tick: 10044
+    input: 1
+    player: 0
+  - tick: 10080
+    input: 0
+    player: 0
+  - tick: 10092
+    input: 1
+    player: 0
+  - tick: 10128
+    input: 0
+    player: 0
+  - tick: 10140
+    input: 1
+    player: 0
+  - tick: 10176
+    input: 0
+    player: 0
+  - tick: 10188
+    input: 1
+    player: 0
+  - tick: 10224
+    input: 0
+    player: 0
+  - tick: 10236
+    input: 1
+    player: 0
+  - tick: 10272
+    input: 0
+    player: 0
+  - tick: 10284
+    input: 1
+    player: 0
+  - tick: 10320
+    input: 0
+    player: 0
+  - tick: 10332
+    input: 1
+    player: 0
+  - tick: 10368
+    input: 0
+    player: 0
+  - tick: 10416
+    input: 0
+    player: 0
+  - tick: 10464
+    input: 0
+    player: 0
+  - tick: 10476
+    input: 1
+    player: 0
+  - tick: 10512
+    input: 0
+    player: 0
+  - tick: 10524
+    input: 1
+    player: 0
+  - tick: 10560
+    input: 0
+    player: 0
+  - tick: 10572
+    input: 1
+    player: 0
+  - tick: 10608
+    input: 0
+    player: 0
+  - tick: 10620
+    input: 1
+    player: 0
+  - tick: 10656
+    input: 0
+    player: 0
+  - tick: 10668
+    input: 1
+    player: 0
+  - tick: 10704
+    input: 0
+    player: 0
+  - tick: 10716
+    input: 1
+    player: 0
+  - tick: 10752
+    input: 2
+    player: 0
+  - tick: 10764
+    input: 2
+    player: 0
+  - tick: 10800
+    input: 2
+    player: 0
+  - tick: 10812
+    input: 2
+    player: 0
+  - tick: 10848
+    input: 3
+    player: 0
+  - tick: 10860
+    input: 3
+    player: 0
+  - tick: 10872
+    input: 1
+    player: 0
+  - tick: 10896
+    input: 3
+    player: 0
+  - tick: 10908
+    input: 3
+    player: 0
+  - tick: 10920
+    input: 1
+    player: 0
+  - tick: 10944
+    input: 2
+    player: 0
+  - tick: 10956
+    input: 2
+    player: 0
+  - tick: 10968
+    input: 0
+    player: 0
+  - tick: 10992
+    input: 2
+    player: 0
+  - tick: 11004
+    input: 2
+    player: 0
+  - tick: 11016
+    input: 0
+    player: 0
+  - tick: 11040
+    input: 3
+    player: 0
+  - tick: 11052
+    input: 3
+    player: 0
+  - tick: 11064
+    input: 1
+    player: 0
+  - tick: 11088
+    input: 3
+    player: 0
+  - tick: 11100
+    input: 3
+    player: 0
+  - tick: 11112
+    input: 1
+    player: 0
+  - tick: 11136
+    input: 2
+    player: 0
+  - tick: 11148
+    input: 2
+    player: 0
+  - tick: 11160
+    input: 0
+    player: 0
+  - tick: 11184
+    input: 2
+    player: 0
+  - tick: 11196
+    input: 2
+    player: 0
+  - tick: 11208
+    input: 0
+    player: 0
+  - tick: 11232
+    input: 3
+    player: 0
+  - tick: 11244
+    input: 3
+    player: 0
+  - tick: 11256
+    input: 1
+    player: 0
+  - tick: 11280
+    input: 3
+    player: 0
+  - tick: 11292
+    input: 3
+    player: 0
+  - tick: 11304
+    input: 1
+    player: 0
+  - tick: 9984
+    input: 0
+    player: 0
+  - tick: 9996
+    input: 1
+    player: 0
+  - tick: 10020
+    input: 2
+    player: 0
+  - tick: 10068
+    input: 2
+    player: 0
+  - tick: 10116
+    input: 2
+    player: 0
+  - tick: 10164
+    input: 3
+    player: 0
+  - tick: 10212
+    input: 3
+    player: 0
+  - tick: 10260
+    input: 3
+    player: 0
+  - tick: 10308
+    input: 3
+    player: 0
+  - tick: 10356
+    input: 2
+    player: 0
+  - tick: 10380
+    input: 1
+    player: 0
+  - tick: 10404
+    input: 2
+    player: 0
+  - tick: 10428
+    input: 1
+    player: 0
+  - tick: 10452
+    input: 2
+    player: 0
+  - tick: 10500
+    input: 2
+    player: 0
+  - tick: 10548
+    input: 3
+    player: 0
+  - tick: 10596
+    input: 3
+    player: 0
+  - tick: 10644
+    input: 3
+    player: 0
+  - tick: 10692
+    input: 3
+    player: 0
+  - tick: 10776
+    input: 0
+    player: 0
+  - tick: 10824
+    input: 0
+    player: 0
+  - tick: 11328
+    input: 1
+    player: 0
+  - tick: 11352
+    input: 2
+    player: 0
+  - tick: 11364
+    input: 2
+    player: 0
+  - tick: 11376
+    input: 0
+    player: 0
+  - tick: 11400
+    input: 2
+    player: 0
+  - tick: 11448
+    input: 2
+    player: 0
+  - tick: 11436
+    input: 1
+    player: 0
+  - tick: 11460
+    input: 2
+    player: 0
+  - tick: 11472
+    input: 0
+    player: 0
+  - tick: 11496
+    input: 3
+    player: 0
+  - tick: 11520
+    input: 1
+    player: 0
+  - tick: 11544
+    input: 3
+    player: 0
+  - tick: 11556
+    input: 3
+    player: 0
+  - tick: 11568
+    input: 0
+    player: 0
+  - tick: 11592
+    input: 3
+    player: 0
+  - tick: 11628
+    input: 1
+    player: 0
+  - tick: 11640
+    input: 2
+    player: 0
+  - tick: 11652
+    input: 2
+    player: 0
+  - tick: 11664
+    input: 0
+    player: 0
+  - tick: 11688
+    input: 3
+    player: 0
+  - tick: 11712
+    input: 1
+    player: 0
+  - tick: 11736
+    input: 2
+    player: 0
+  - tick: 11748
+    input: 2
+    player: 0
+  - tick: 11760
+    input: 0
+    player: 0
+  - tick: 11784
+    input: 2
+    player: 0
+  - tick: 11820
+    input: 1
+    player: 0
+  - tick: 11832
+    input: 2
+    player: 0
+  - tick: 11844
+    input: 2
+    player: 0
+  - tick: 11856
+    input: 0
+    player: 0
+  - tick: 11880
+    input: 3
+    player: 0

@@ -626,7 +626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 503888497}
-  songChart: {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
+  songChart: {fileID: 11400000, guid: 92d2e1c5b34d9bca9a38a60b1ce953f4, type: 2}
+  countdownText: {fileID: 0}
 --- !u!1 &562846843
 GameObject:
   m_ObjectHideFlags: 0
