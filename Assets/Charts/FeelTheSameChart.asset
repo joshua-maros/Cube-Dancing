@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: FeelTheSameChart
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: be68dec9406365fe79686029c784b98d, type: 3}
-  difficultyOutOfTen: 8
+  cover: {fileID: 2800000, guid: 05e8cdfe5b4c1eed38199a3df4e1f4b0, type: 3}
+  title: Feel The Same
+  band: Battle Tapes
+  difficultyOutOfTen: 7
   segments:
   - startTime: 2.338
     endTime: 6.913

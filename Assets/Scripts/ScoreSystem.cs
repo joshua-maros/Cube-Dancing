@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
- 
+    public static ScoreSystem instance;
+
     //players( protaganists) score at any given time;
     private int currentScore = 0;
 
@@ -35,6 +36,8 @@ public class ScoreSystem : MonoBehaviour
 
     
     void Start() {
+        instance = this;
+
         currentTick = SongClock.instance.GetCurrentTick();
 
         scoreText.text = "0";
@@ -56,7 +59,7 @@ public class ScoreSystem : MonoBehaviour
     {
         var time = Mathf.Abs(tick - SongClock.instance.GetCurrentTick());
         var multiplier = 1.0f;
-        multiplier *= Mathf.Pow(2.0f, SongClock.instance.songChart.difficultyOutOfTen / 2.0f);
+        multiplier *= SongClock.instance.songChart.difficultyOutOfTen + 4.0f;
         if (time < 1.6f) {
             currentScore += (int) (10 * multiplier);
             scorePulse = 4.0f;

@@ -10,6 +10,8 @@ public class PlayerControls : MonoBehaviour
     public Event previousEvent = new Event(-2, EventAction.Down, Player.A);
 
     void Start() {
+        cc = GetComponent<CubeController>();
+        scoreSystem = ScoreSystem.instance;
         AdvanceNextEvent();
     }
 

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Pork Soda
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 370bcc6da7ce02bd9a5e8eed6e6a98fb, type: 3}
+  cover: {fileID: 2800000, guid: 4a30891fe14921c04804e068e7e18402, type: 3}
+  title: Pork Soda
+  band: Glass Animals
   difficultyOutOfTen: 4
   segments:
   - startTime: 0.624

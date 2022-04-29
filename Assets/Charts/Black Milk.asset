@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Black Milk
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: bce426765a227798e81fb8f7a4cca163, type: 3}
+  cover: {fileID: 2800000, guid: 1e8abfc51873977499db37694a1277f5, type: 3}
+  title: Black Milk
+  band: Massive Attack
   difficultyOutOfTen: 2
   segments:
   - startTime: 9.906

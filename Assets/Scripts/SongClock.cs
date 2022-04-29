@@ -16,10 +16,18 @@ public class SongClock : MonoBehaviour
     public static SongClock instance;
     private float ticksUntilSongStart = TICKS_PER_MEASURE * 1.5f;
     private bool songStarted = false;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        songChart = MainMenuDirector.theChart;
+        if (MainMenuDirector.theAutoplay) {
+            player.AddComponent(typeof(BotPlayer));
+        } else {
+            player.AddComponent(typeof(PlayerControls));
+        }
+        Instantiate(MainMenuDirector.theSkin, player.transform);
         src = GetComponent<AudioSource>();
         src.clip = songChart.song;
         instance = this;

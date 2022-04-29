@@ -14,6 +14,7 @@ public class CubeController : MonoBehaviour
 
     private EventAction animationAction;
     private float animationTimer = 1.0f;
+    private const float ANIMATION_TIME = 0.12f;
     private TransformData previousTransform;
  
     void Start() {
@@ -26,8 +27,8 @@ public class CubeController : MonoBehaviour
     void Update() {
         float old = animationTimer;
         animationTimer += Time.deltaTime;
-        animationTimer = Mathf.Min(animationTimer, 0.08f);
-        float progress = 1.5f - 0.5f * (animationTimer / 0.08f);
+        animationTimer = Mathf.Min(animationTimer, ANIMATION_TIME);
+        float progress = 1.5f - 0.5f * (animationTimer / ANIMATION_TIME);
         Vector3 offset = previousTransform.localPosition;
         Vector3 rotationAxis = Vector3.zero;
         switch(animationAction) {
@@ -75,7 +76,7 @@ public class CubeController : MonoBehaviour
     }
 
     public void Step(EventAction input) {
-        animationTimer = 0.1f;
+        animationTimer = ANIMATION_TIME + 0.01f;
         Update();
         coord.Offset(input);
         animationAction = input;

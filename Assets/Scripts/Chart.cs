@@ -11,6 +11,12 @@ public class Chart : ScriptableObject
 {
     [SerializeField]
     public AudioClip song;
+    [SerializeField]
+    public Texture cover;
+    [SerializeField]
+    public string title;
+    [SerializeField]
+    public string band;
     public int difficultyOutOfTen = 0;
 
     [SerializeField]

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: What You Know
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 9f07696de8d8881d0ba32e31f5994ac7, type: 3}
-  difficultyOutOfTen: 6
+  cover: {fileID: 2800000, guid: a8b44b9e7284135d6b5e2ef74ef092ba, type: 3}
+  title: What You Know
+  band: Two Door Cinema Club
+  difficultyOutOfTen: 8
   segments:
   - startTime: 0.377
     endTime: 14.215
@@ -83,11 +86,11 @@ MonoBehaviour:
     input: 1
     player: 0
   - tick: 132
-    input: 3
-    player: 0
-  - tick: 132
     input: 2
     player: 1
+  - tick: 132
+    input: 3
+    player: 0
   - tick: 138
     input: 2
     player: 1
@@ -140,11 +143,11 @@ MonoBehaviour:
     input: 1
     player: 0
   - tick: 288
-    input: 2
-    player: 0
-  - tick: 288
     input: 3
     player: 1
+  - tick: 288
+    input: 2
+    player: 0
   - tick: 306
     input: 2
     player: 0
@@ -188,11 +191,11 @@ MonoBehaviour:
     input: 2
     player: 0
   - tick: 432
-    input: 2
-    player: 1
-  - tick: 432
     input: 0
     player: 0
+  - tick: 432
+    input: 2
+    player: 1
   - tick: 450
     input: 0
     player: 0
@@ -246,10 +249,10 @@ MonoBehaviour:
     player: 0
   - tick: 624
     input: 2
-    player: 0
+    player: 1
   - tick: 624
     input: 2
-    player: 1
+    player: 0
   - tick: 642
     input: 2
     player: 0
@@ -308,11 +311,11 @@ MonoBehaviour:
     input: 3
     player: 0
   - tick: 804
-    input: 1
-    player: 1
-  - tick: 804
     input: 0
     player: 0
+  - tick: 804
+    input: 1
+    player: 1
   - tick: 816
     input: 2
     player: 1
@@ -338,11 +341,11 @@ MonoBehaviour:
     input: 3
     player: 1
   - tick: 876
-    input: 0
-    player: 1
-  - tick: 876
     input: 1
     player: 0
+  - tick: 876
+    input: 0
+    player: 1
   - tick: 888
     input: 3
     player: 0
@@ -392,11 +395,11 @@ MonoBehaviour:
     input: 0
     player: 1
   - tick: 996
-    input: 1
-    player: 1
-  - tick: 996
     input: 0
     player: 0
+  - tick: 996
+    input: 1
+    player: 1
   - tick: 1008
     input: 2
     player: 1
@@ -419,11 +422,11 @@ MonoBehaviour:
     input: 1
     player: 0
   - tick: 1056
-    input: 3
-    player: 1
-  - tick: 1056
     input: 0
     player: 0
+  - tick: 1056
+    input: 3
+    player: 1
   - tick: 1068
     input: 0
     player: 1
@@ -449,11 +452,11 @@ MonoBehaviour:
     input: 0
     player: 1
   - tick: 1128
-    input: 1
-    player: 1
-  - tick: 1128
     input: 2
     player: 0
+  - tick: 1128
+    input: 1
+    player: 1
   - tick: 1140
     input: 1
     player: 0
@@ -476,11 +479,11 @@ MonoBehaviour:
     input: 0
     player: 1
   - tick: 1188
-    input: 1
-    player: 1
-  - tick: 1188
     input: 0
     player: 0
+  - tick: 1188
+    input: 1
+    player: 1
   - tick: 1200
     input: 2
     player: 0
@@ -560,11 +563,11 @@ MonoBehaviour:
     input: 2
     player: 0
   - tick: 1380
-    input: 0
-    player: 0
-  - tick: 1380
     input: 1
     player: 1
+  - tick: 1380
+    input: 0
+    player: 0
   - tick: 1392
     input: 2
     player: 1
@@ -587,11 +590,11 @@ MonoBehaviour:
     input: 1
     player: 1
   - tick: 1440
-    input: 3
-    player: 1
-  - tick: 1440
     input: 0
     player: 0
+  - tick: 1440
+    input: 3
+    player: 1
   - tick: 1452
     input: 0
     player: 1
@@ -641,11 +644,11 @@ MonoBehaviour:
     input: 2
     player: 1
   - tick: 1608
-    input: 0
-    player: 1
-  - tick: 1608
     input: 1
     player: 0
+  - tick: 1608
+    input: 0
+    player: 1
   - tick: 1632
     input: 3
     player: 1
@@ -665,11 +668,11 @@ MonoBehaviour:
     input: 3
     player: 0
   - tick: 1704
-    input: 1
-    player: 0
-  - tick: 1704
     input: 0
     player: 1
+  - tick: 1704
+    input: 1
+    player: 0
   - tick: 1728
     input: 3
     player: 1
@@ -698,11 +701,11 @@ MonoBehaviour:
     input: 1
     player: 0
   - tick: 1824
-    input: 3
-    player: 1
-  - tick: 1824
     input: 0
     player: 0
+  - tick: 1824
+    input: 3
+    player: 1
   - tick: 1848
     input: 1
     player: 1
@@ -731,11 +734,11 @@ MonoBehaviour:
     input: 2
     player: 0
   - tick: 1944
-    input: 2
-    player: 0
-  - tick: 1944
     input: 1
     player: 1
+  - tick: 1944
+    input: 2
+    player: 0
   - tick: 1956
     input: 2
     player: 0
@@ -758,11 +761,11 @@ MonoBehaviour:
     input: 1
     player: 1
   - tick: 2064
-    input: 3
-    player: 1
-  - tick: 2064
     input: 0
     player: 0
+  - tick: 2064
+    input: 3
+    player: 1
   - tick: 2088
     input: 1
     player: 1
@@ -788,11 +791,11 @@ MonoBehaviour:
     input: 1
     player: 1
   - tick: 2208
-    input: 2
-    player: 1
-  - tick: 2208
     input: 3
     player: 0
+  - tick: 2208
+    input: 2
+    player: 1
   - tick: 2232
     input: 0
     player: 1
@@ -812,11 +815,11 @@ MonoBehaviour:
     input: 2
     player: 1
   - tick: 2316
-    input: 0
-    player: 1
-  - tick: 2316
     input: 1
     player: 0
+  - tick: 2316
+    input: 0
+    player: 1
   - tick: 2322
     input: 2
     player: 1
@@ -867,10 +870,10 @@ MonoBehaviour:
     player: 1
   - tick: 2424
     input: 0
-    player: 1
+    player: 0
   - tick: 2424
     input: 0
-    player: 0
+    player: 1
   - tick: 2436
     input: 0
     player: 1
@@ -890,11 +893,11 @@ MonoBehaviour:
     input: 3
     player: 1
   - tick: 2472
-    input: 0
-    player: 1
-  - tick: 2472
     input: 1
     player: 0
+  - tick: 2472
+    input: 0
+    player: 1
   - tick: 2484
     input: 0
     player: 1

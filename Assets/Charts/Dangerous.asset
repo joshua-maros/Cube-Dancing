@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Dangerous
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: a2db7f995286f342496ebe994181ef35, type: 3}
+  cover: {fileID: 2800000, guid: ba8461b78552feea3bf9b3b32ef5dcb3, type: 3}
+  title: Dangerous
+  band: Big Data (ft. Joywave)
   difficultyOutOfTen: 2
   segments:
   - startTime: 0.083
