@@ -55,6 +55,8 @@ public class MainMenuDirector : MonoBehaviour
         bandName.text= "By " + chart.band;
         TextMeshPro highScore = obj.transform.Find("Score").GetComponent<TextMeshPro>();
         highScore.text= "High Score: " + chart.highScore;
+        TextMeshPro perfectScore = obj.transform.Find("PerfectScore").GetComponent<TextMeshPro>();
+        perfectScore.text= "Perfect Score: " + chart.events.Count * 10 * (chart.difficultyOutOfTen + 4);
         TextMeshPro difficulty = obj.transform.Find("Difficulty").GetComponent<TextMeshPro>();
         difficulty.text = new string('*', chart.difficultyOutOfTen);
     }
