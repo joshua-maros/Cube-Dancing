@@ -17,6 +17,8 @@ public class Chart : ScriptableObject
     public string title;
     [SerializeField]
     public string band;
+    [SerializeField]
+    public int highScore = 0;
     public int difficultyOutOfTen = 0;
 
     [SerializeField]

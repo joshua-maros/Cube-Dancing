@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
@@ -15,6 +16,7 @@ public class SongClock : MonoBehaviour
     public TextMeshProUGUI countdownText;
     public static SongClock instance;
     private float ticksUntilSongStart = TICKS_PER_MEASURE * 1.5f;
+    private float endTimer = 0.0f;
     private bool songStarted = false;
     public GameObject player;
 
@@ -56,6 +58,14 @@ public class SongClock : MonoBehaviour
             countdownText.rectTransform.localScale = new Vector3(scale, scale, scale);
         } else {
             countdownText.rectTransform.localScale = Vector3.zero;
+        }
+        Debug.Log(src.time.ToString() + "/" + songChart.segments[songChart.segments.Length - 1].endTime.ToString());
+        if (src.time > songChart.segments[songChart.segments.Length - 1].endTime) {
+            if (ScoreSystem.instance.currentScore > songChart.highScore) {
+                songChart.highScore = ScoreSystem.instance.currentScore;
+                PlayerPrefs.SetInt("hs." + songChart.title, songChart.highScore);
+            }
+            SceneManager.LoadScene("Main Menu");
         }
     }
 

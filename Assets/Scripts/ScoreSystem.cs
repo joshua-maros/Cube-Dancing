@@ -9,7 +9,7 @@ public class ScoreSystem : MonoBehaviour
     public static ScoreSystem instance;
 
     //players( protaganists) score at any given time;
-    private int currentScore = 0;
+    public int currentScore = 0;
 
 
     //Point types that can be gotten

@@ -28,6 +28,7 @@ public class MainMenuDirector : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < charts.Count; i++) {
+            LoadHighScore(i);
             InstantiateCover(i);
             InstantiateTitle(i);
         }
@@ -52,8 +53,14 @@ public class MainMenuDirector : MonoBehaviour
         songName.text = chart.title;
         TextMeshPro bandName = obj.transform.Find("Band").GetComponent<TextMeshPro>();
         bandName.text= "By " + chart.band;
+        TextMeshPro highScore = obj.transform.Find("Score").GetComponent<TextMeshPro>();
+        highScore.text= "High Score: " + chart.highScore;
         TextMeshPro difficulty = obj.transform.Find("Difficulty").GetComponent<TextMeshPro>();
         difficulty.text = new string('*', chart.difficultyOutOfTen);
+    }
+
+    void LoadHighScore(int index) {
+        charts[index].highScore = PlayerPrefs.GetInt("hs." + charts[index].title);
     }
 
     void SetSkin(GameObject newSkin) {
