@@ -25,16 +25,18 @@ public class SongClock : MonoBehaviour
     void Start()
     {
         instance = this;
-        songChart = MainMenuDirector.theChart;
-        if (MainMenuDirector.theAutoplay) {
-            player.AddComponent(typeof(BotPlayer));
-        } else {
-            player.AddComponent(typeof(PlayerControls));
+        if (MainMenuDirector.theSkin != null) {
+            songChart = MainMenuDirector.theChart;
+            if (MainMenuDirector.theAutoplay) {
+                player.AddComponent(typeof(BotPlayer));
+            } else {
+                player.AddComponent(typeof(PlayerControls));
+            }
+            Instantiate(MainMenuDirector.theSkin, player.transform);
         }
         src = GetComponent<AudioSource>();
         src.clip = songChart.song;
         songChart.AnnotatePositions();
-        Instantiate(MainMenuDirector.theSkin, player.transform);
     }
 
     public void PlaySong() {
