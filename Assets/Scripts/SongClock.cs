@@ -15,6 +15,7 @@ public class SongClock : MonoBehaviour
     public Chart songChart;
     public TextMeshProUGUI countdownText;
     public static SongClock instance;
+    public GameObject errorArrow;
     private float ticksUntilSongStart = TICKS_PER_MEASURE * 1.5f;
     private float endTimer = 0.0f;
     private bool songStarted = false;
@@ -23,17 +24,17 @@ public class SongClock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         songChart = MainMenuDirector.theChart;
         if (MainMenuDirector.theAutoplay) {
             player.AddComponent(typeof(BotPlayer));
         } else {
             player.AddComponent(typeof(PlayerControls));
         }
-        Instantiate(MainMenuDirector.theSkin, player.transform);
         src = GetComponent<AudioSource>();
         src.clip = songChart.song;
-        instance = this;
         songChart.AnnotatePositions();
+        Instantiate(MainMenuDirector.theSkin, player.transform);
     }
 
     public void PlaySong() {
@@ -59,7 +60,6 @@ public class SongClock : MonoBehaviour
         } else {
             countdownText.rectTransform.localScale = Vector3.zero;
         }
-        Debug.Log(src.time.ToString() + "/" + songChart.segments[songChart.segments.Length - 1].endTime.ToString());
         if (src.time > songChart.segments[songChart.segments.Length - 1].endTime) {
             if (ScoreSystem.instance.currentScore > songChart.highScore) {
                 songChart.highScore = ScoreSystem.instance.currentScore;

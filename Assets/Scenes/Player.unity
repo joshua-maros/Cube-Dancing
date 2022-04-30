@@ -282,6 +282,7 @@ MonoBehaviour:
   src: {fileID: 503888497}
   songChart: {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
   countdownText: {fileID: 897038161}
+  errorArrow: {fileID: 8785655914115141444, guid: 4a8aa4045844af91c936d0d0852ffb8f, type: 3}
   player: {fileID: 980550195}
 --- !u!1 &705507993
 GameObject:
@@ -944,6 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47c3c38bf2f9a34b81ccb4e02602b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScore: 0
   multiTracker: 0
   multiplierThresholds: 
   scoreText: {fileID: 393767126}

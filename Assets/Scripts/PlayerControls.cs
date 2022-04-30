@@ -61,6 +61,7 @@ public class PlayerControls : MonoBehaviour
         if (nextEvent.input == action) {
             if (SongClock.instance.GetCurrentTick() <= previousEvent.tick) {
                 scoreSystem.NoteMissed();
+                IncorrectInput(action);
             } else {
                 scoreSystem.NoteHit(nextEvent.tick);
                 cc.Step(nextEvent.input);
@@ -68,6 +69,19 @@ public class PlayerControls : MonoBehaviour
             }
         } else {
             scoreSystem.NoteMissed();
+            IncorrectInput(action);
         }
+    }
+
+    void IncorrectInput(EventAction input) {
+        float angle = 0.0f;
+        if (input == EventAction.Up) {
+            angle = 90.0f;
+        } else if (input == EventAction.Right) {
+            angle = 180.0f;
+        } else if (input == EventAction.Down) {
+            angle = 270.0f;
+        }
+        Instantiate(SongClock.instance.errorArrow, transform.localPosition - new Vector3(0, 0.5f, 0), Quaternion.AngleAxis(angle, Vector3.up));
     }
 }
