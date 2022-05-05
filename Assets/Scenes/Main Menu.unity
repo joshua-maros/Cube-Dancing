@@ -168,11 +168,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cover: {fileID: 8200743953011356674, guid: 07a5d3d99d9300aadb7ea5e776e579d2, type: 3}
   charts:
+  - {fileID: 11400000, guid: f7472028a1446a410930ed50e8d9069e, type: 2}
   - {fileID: 11400000, guid: 92d2e1c5b34d9bca9a38a60b1ce953f4, type: 2}
   - {fileID: 11400000, guid: e77d3a729d7dcd23dbe93c49f225ce8f, type: 2}
   - {fileID: 11400000, guid: d136648cf9e0f36dc860d3ac310c3171, type: 2}
   - {fileID: 11400000, guid: 6304423d6246b2dc586ea245f71c1bce, type: 2}
   - {fileID: 11400000, guid: eb511d01c4a233c84b2a71d1295ae646, type: 2}
+  - {fileID: 11400000, guid: b78ad8243f993080e814901a97f8c5b3, type: 2}
   covers: []
   selected: 0
   mainCamera: {fileID: 1789451619}

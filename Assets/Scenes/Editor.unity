@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 503888497}
-  songChart: {fileID: 11400000, guid: 92d2e1c5b34d9bca9a38a60b1ce953f4, type: 2}
+  songChart: {fileID: 11400000, guid: f7472028a1446a410930ed50e8d9069e, type: 2}
   countdownText: {fileID: 26019991}
   errorArrow: {fileID: 0}
   player: {fileID: 0}
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScore: 0
-  multiTracker: 0
+  currentMultiplier: 1
   multiplierThresholds: 
   scoreText: {fileID: 393767126}
   multiText: {fileID: 1264421050}

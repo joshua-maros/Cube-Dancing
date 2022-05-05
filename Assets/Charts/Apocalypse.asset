@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90844e8479b6a4f10908ff484a5af16d, type: 3}
+  m_Name: Apocalypse
+  m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: bb9b434cebfd042d4981fcde2dc3f0ec, type: 3}
+  cover: {fileID: 2800000, guid: e2d908f85b777d27b964c2ae0f5e9463, type: 3}
+  title: Apocalypse (Warmup)
+  band: J Lloyd
+  highScore: 0
+  difficultyOutOfTen: 0
+  segments:
+  - startTime: 0.021
+    endTime: 40.871
+    numMeasures: 16
+  - startTime: 40.871
+    endTime: 61.296
+    numMeasures: 8
+  events:
+  - tick: 0
+    input: 1
+    player: 0
+  - tick: 96
+    input: 1
+    player: 0
+  - tick: 192
+    input: 1
+    player: 0
+  - tick: 288
+    input: 1
+    player: 0
+  - tick: 384
+    input: 0
+    player: 0
+  - tick: 408
+    input: 0
+    player: 0
+  - tick: 432
+    input: 0
+    player: 0
+  - tick: 480
+    input: 0
+    player: 0
+  - tick: 504
+    input: 0
+    player: 0
+  - tick: 528
+    input: 0
+    player: 0
+  - tick: 576
+    input: 1
+    player: 0
+  - tick: 600
+    input: 1
+    player: 0
+  - tick: 624
+    input: 1
+    player: 0
+  - tick: 672
+    input: 1
+    player: 0
+  - tick: 696
+    input: 1
+    player: 0
+  - tick: 720
+    input: 1
+    player: 0
+  - tick: 768
+    input: 3
+    player: 0
+  - tick: 792
+    input: 3
+    player: 0
+  - tick: 816
+    input: 3
+    player: 0
+  - tick: 840
+    input: 3
+    player: 0
+  - tick: 864
+    input: 2
+    player: 0
+  - tick: 888
+    input: 2
+    player: 0
+  - tick: 912
+    input: 2
+    player: 0
+  - tick: 936
+    input: 2
+    player: 0
+  - tick: 960
+    input: 2
+    player: 0
+  - tick: 984
+    input: 2
+    player: 0
+  - tick: 1008
+    input: 2
+    player: 0
+  - tick: 1032
+    input: 2
+    player: 0
+  - tick: 1056
+    input: 3
+    player: 0
+  - tick: 1080
+    input: 3
+    player: 0
+  - tick: 1104
+    input: 3
+    player: 0
+  - tick: 1128
+    input: 3
+    player: 0
+  - tick: 1176
+    input: 0
+    player: 0
+  - tick: 1200
+    input: 0
+    player: 0
+  - tick: 1272
+    input: 0
+    player: 0
+  - tick: 1296
+    input: 0
+    player: 0
+  - tick: 1368
+    input: 1
+    player: 0
+  - tick: 1392
+    input: 1
+    player: 0
+  - tick: 1464
+    input: 1
+    player: 0
+  - tick: 1488
+    input: 1
+    player: 0
+  - tick: 1536
+    input: 3
+    player: 0
+  - tick: 1560
+    input: 3
+    player: 0
+  - tick: 1584
+    input: 3
+    player: 0
+  - tick: 1608
+    input: 3
+    player: 0
+  - tick: 1632
+    input: 2
+    player: 0
+  - tick: 1656
+    input: 2
+    player: 0
+  - tick: 1680
+    input: 2
+    player: 0
+  - tick: 1704
+    input: 2
+    player: 0
+  - tick: 1728
+    input: 2
+    player: 0
+  - tick: 1752
+    input: 2
+    player: 0
+  - tick: 1776
+    input: 2
+    player: 0
+  - tick: 1800
+    input: 2
+    player: 0
+  - tick: 1824
+    input: 3
+    player: 0
+  - tick: 1848
+    input: 3
+    player: 0
+  - tick: 1872
+    input: 3
+    player: 0
+  - tick: 1896
+    input: 3
+    player: 0
+  - tick: 1944
+    input: 0
+    player: 0
+  - tick: 1968
+    input: 0
+    player: 0
+  - tick: 2040
+    input: 0
+    player: 0
+  - tick: 2064
+    input: 0
+    player: 0
+  - tick: 2136
+    input: 1
+    player: 0
+  - tick: 2160
+    input: 1
+    player: 0
+  - tick: 2232
+    input: 1
+    player: 0
+  - tick: 2256
+    input: 1
+    player: 0
+  - tick: 2592
+    input: 1
+    player: 0
