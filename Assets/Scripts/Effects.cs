@@ -49,7 +49,8 @@ public class Effects : MonoBehaviour
         if (errorFlash < 0.0f) errorFlash = 0.0f;
 
         var t = (int) ft;
-        if (t % (SongClock.TICKS_PER_MEASURE / 2) == SongClock.TICKS_PER_MEASURE / 4) {
+        if (t % (SongClock.TICKS_PER_MEASURE / 2) > SongClock.TICKS_PER_MEASURE / 4) {
+            t -= t % (SongClock.TICKS_PER_MEASURE / 4);
             if (lastRippleTriggered != t) {
                 ripples.Add(new Ripple(CubeController.instance.gameObject.transform.position));
                 lastRippleTriggered = t;
